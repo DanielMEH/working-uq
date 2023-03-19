@@ -1,0 +1,842 @@
+@import url('https://fonts.googleapis.com/css2? family= Nerko+One & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css);
+
+/*   @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
+
+
+/*  👉 Inicio del Reset/*
+
+  Con este reset vamos a resolver:
+    👉 Unificar el uso de Custom Properties
+    👉 Problemas de box-model más generales
+    👉 Problemas con imagenes, vídeos e iconos svg
+    👉 Problemas con tipografías y etiquetas input en formularios
+    👉 Unificar la tipografía de todas las etiquetas de una web
+*/
+
+
+/* Aquí definimos las Custom properties */
+
+:root {
+    --negro: #393939;
+    /* Tipografía */
+    --tipo-principal: Helvetica, Arial, sans-serif;
+    --tipo-secundaria: Verdana;
+    --color1: rgb(245, 133, 6);
+    --color2: rgba(23, 180, 83, 0.877);
+    --color3: rgba(11, 194, 211, 0.623);
+    --fondo: #FFFFFF;
+    --titulos: 33px;
+    --subtitulos: 25px;
+    --margenes: 6px;
+    --espacios: 10px;
+    --espacios-contenido: 45px;
+    --negro: #393939;
+    --gris: #e0dede;
+    --blanco: #ececec;
+    --sombra-ppal: #c9c9c9;
+    --sombra-sec: #ffffff;
+    --borde-negro: #00000050;
+    --marcado: rgb(127, 195, 255);
+    --bg: #1e2345;
+  --violet: rgb(161, 132, 240);
+  --pink: #d60087;
+  --turquoise: #2fdabd;
+  font-size: 10px;
+    /* Tipografía */
+}
+
+
+/* Las adaptamos al modo oscuro */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --negro: #ececec;
+        --blanco: #303030;
+        --sombra-ppal: #242424;
+        --sombra-sec: #3c3c3c;
+        --borde-negro: #FFFFFF50;
+    }
+}
+
+
+/* Opcional */
+
+
+/* Configuramos si un usuario ha activado el modo alto contraste. (WD) */
+
+@media (prefers-contrast: high) {
+    :root {
+        --negro: #ececec;
+        --blanco: #303030;
+        --sombra-ppal: #242424;
+        --sombra-sec: #3c3c3c;
+        --borde-negro: #FFFFFF50;
+    }
+}
+
+
+/* Opcional */
+
+
+/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+
+/* Reseteamos los margin y paddings de todas las etiquetas */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+
+/* Evitamos problemas con las imagenes */
+
+img,
+picture,
+video,
+iframe,
+figure {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    /* opcional */
+    object-fit: cover;
+    /* opcional */
+    object-position: center center;
+}
+
+.contador>a>img {
+    max-width: 100%;
+    width: auto;
+    display: block;
+    /* opcional */
+    object-fit: cover;
+    /* opcional */
+    object-position: center center;
+}
+
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
+
+
+/* ... excepto los que se encuentran en párrafos */
+
+p a {
+    display: inline;
+}
+
+
+/* Quitamos los puntos de los <li> */
+
+li {
+    list-style-type: none;
+}
+
+
+/* Configuramos anclas suaves */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+    font-size: 1em;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+
+/* Configuramos el texto que seleccionamos */
+
+::selection {
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+
+form,
+input,
+textarea,
+select,
+button,
+label {
+    font-family: inherit;
+    font-size: inherit;
+    hyphens: auto;
+    background-color: transparent;
+    color: inherit;
+    display: block;
+    /* opcional */
+    appearance: none;
+}
+
+
+/* Reseteamos las tablas */
+
+table,
+tr,
+td {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* Evitamos problemas con los SVG */
+
+svg {
+    width: 100%;
+    display: block;
+    fill: currentColor;
+}
+
+
+/* (Probándolo, no usar en producción) En el caso de añadir una  */
+
+
+/* p svg{
+    display: inline;
+    width: initial;
+  } */
+
+
+/* Configuramos la tipografía para toda la web */
+
+body {
+    min-height: 100vh;
+    font-size: 100%;
+    font-family: var(--tipo-principal);
+    color: var(--negro);
+    font-family: 'open sans';
+    background: #fff;
+    /* opcional */
+    line-height: 1.4em;
+    /* opcional */
+    hyphens: auto;
+    /* opcional */
+    font-smooth: always;
+    /* opcional */
+    -webkit-font-smoothing: antialiased;
+    /* opcional */
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/*Fin del Reset*/
+
+
+/* -------------------------------------------------------------------------------------------*/
+
+
+/* -------------------------------------------------------------------------------------------*/
+
+
+/**  👉 Inicio Preloader Guía de Busqueda*/
+
+.hidden {
+    overflow: hidden;
+}
+
+.centrado {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/** Fin Preloader Guía de Busqueda*/
+
+
+/* -------------------------------------------------------------------------------------------*/
+
+
+/* -------------------------------------------------------------------------------------------*/
+
+
+/** 👉 Inicio Header= Barra Azul Contiene Logo Gov.co y Buscar*/
+
+.barra_azul {
+    /*    outline: 2px solid red;  */
+    width: 100%;
+    height: 65px;
+    background: #ffffff;
+}
+
+.azul {
+    /*  outline: 2px solid red;  */
+    margin: auto;
+    padding: auto;
+    width: 100%;
+    height: 65px;
+    background: #FFFFFF;
+    /* top: 0px;
+    position: fixed;
+    z-index: 30;
+    width: 100%;
+    background-color: rgba(255,255,255,0.9); */
+}
+
+
+/**Sección Barra Azul + Logo Presidencia**/
+
+.contenedor-nav-nacion {
+    /* outline: 2px solid red;  */
+    background-color: #3366cc;
+    margin: auto;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
+
+
+/** Contenedor logo nación*/
+
+.logo-nacion {
+    /* outline: 2px solid rgb(255, 251, 0); */
+    width: 200px;
+    height: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
+
+
+/** Imagen Logo nación*/
+
+.nav_logoG {
+    width: 100%;
+    height: 100%;
+}
+
+
+/** Buiscador de Google*/
+
+.form-control {
+    /* outline: 2px solid rgb(255, 251, 0); */
+    background-color: #FFFFFF;
+    margin: 0px;
+    padding: 0px;
+    width: 220px;
+    height: 65px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* .goog-te-gadget .goog-te-combo {
+    margin: 10px 0;
+} */
+
+
+/** Fin Barra Azul */
+
+
+/* -------------------------------------------------------------------------------------------*/
+
+
+/* -------------------------------------------------------------------------------------------*/
+
+
+/** 👉Inicio Header */
+
+
+/*  Código Logo Departamento - SEDQ - Menu */
+
+.logo {
+    /* outline: 2px solid #ececec; */
+    width: 100%;
+    height: 100%;
+}
+
+.li .btn-header {
+    /*  outline: 2px solid #ececec; */
+    width: auto;
+}
+
+.btn-header {
+    /* outline: 2px solid rgb(222, 238, 4); */
+    color: rgb(4, 3, 83);
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.header {
+    /*  outline: 2px solid rgb(126, 170, 3); */
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 1em;
+    /*  color: rgb(7, 7, 7); */
+    /* display: -webkit-box;
+        display: -ms-flexbox; */
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.header1 {
+    /*  outline: 2px solid rgb(126, 170, 3); */
+    width: 65%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header .button {
+    outline: 2px solid rgb(8, 1, 99);
+    display: none;
+    cursor: pointer;
+}
+
+
+/*--Media Querys--*/
+
+@media screen and (max-width:720px) {
+    .header1 {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .header .button {
+        display: flex;
+    }
+}
+
+.header .svg {
+    width: 2em;
+    height: 2em;
+    fill: rgb(15, 5, 143);
+}
+
+@media screen and (max-width: 720px) {
+    .header .nav_act {
+        width: 100%;
+        opacity: 0;
+        height: 0vh;
+        pointer-events: none;
+        overflow: hidden;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .header .nav_act.activo {
+        opacity: 1;
+        height: 50vh;
+        pointer-events: auto;
+    }
+}
+
+.header .ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 720px) {
+    .header .ul {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+.header .li {
+    margin: 0 0.5em;
+}
+
+@media screen and (max-width: 720px) {
+    .header .li {
+        margin: 1em 0;
+    }
+}
+
+
+/** Fin Header */
+
+
+/*  Código Logo Departamento - SEDQ - Menu */
+
+
+/* -------------------------------------------------------------------------------------------*/
+
+
+/* -------------------------------------------------------------------------------------------*/
+
+
+/** 👉 Incio del Main */
+
+main {
+    /*  outline: 2px solid red; */
+    font-family: var(--tipo-principal);
+    font-size: 100%;
+    line-height: 1em;
+    background-color: #fff;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 5px;
+}
+
+.titulo-h3 {
+    font-size: 30px;
+    color: #001545;
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    text-align: center;
+    text-transform:capitalize;
+    margin-top: 90px;
+    display: block;
+}
+
+
+/* -------------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------------*/
+
+#pagination-container {
+    /* outline: 2px solid red;
+     */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.paginacaoCursor {
+    margin: 5px;
+    padding: 5px;
+    color: #001545;
+    /*  background: #001545; */
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.customPagination {
+    margin: 10px;
+    padding: 10px 20px;
+    color: #fff;
+    background: #001545;
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.casos{  
+    /* outline: 2px solid red; */
+    /* padding: 2rem;*/
+    padding: 5px; 
+    background-color: #fff;
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .articulo{
+    outline: 3px solid #001545;
+    width: 100%;
+    min-height: 10em;
+    padding: 1em 2em 2em;
+  }
+  
+  .articulo .imagen{
+    min-height: 12em;   
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .articulo .titulo{
+    font-size: 1.3em;
+    text-transform: uppercase;
+    font-weight: normal;
+    padding: 1em 0 0.4em;
+    line-height: 1.1em;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 5px;
+  }
+  
+  .articulo .parrafo{
+    font-size: 1em;
+    text-align: justify;
+    padding: 0.4em 0em 0.4em 0.4em;
+    line-height: 1.1em;
+  }
+  
+
+  @media screen and (max-width:720px) {
+    .casos {
+        width: 95%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+  
+  @media (min-width: 960px){
+    .articulo{
+      width: 50%;
+    }
+    
+    .articulo .imagen{
+      min-height: 12em;
+    }
+  }
+  
+  @media (min-width: 1200px){
+    
+    .articulo{
+      width: 33%;
+      width: calc(100% / 3);
+    }
+  
+  }
+  
+  @media (min-width: 1380px){  
+    .articulo{
+      width: 25%;
+      width: calc(100% / 4);
+
+     
+    }
+  
+  }}
+  .card__father{
+    margin: 20px;
+    perspective: 1000px;
+}
+
+.card__father:hover .card{
+    transform: rotateY(180deg);
+}
+
+
+.card{
+    width: 350px;
+    height: 400px;
+    
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 600ms;
+}
+
+.card__front{
+    background-size: cover;
+    background-position: center;
+}
+
+
+.card__front,
+.card__back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+}
+
+.card__back{
+    transform: rotateY(180deg);
+    background: rgb(255, 255, 255);
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    overflow-y:scroll;
+}
+.card__back::-webkit-scrollbar{
+    background: rgb(255, 255, 255);
+    width: 7px;
+    background: rgba(255, 255, 255, 0.977);
+    border-radius: 20px;
+    padding: 4px;
+
+}
+
+.card__back::-webkit-scrollbar-thumb{
+ border-left: 10px solid rgb(255, 255, 255);
+ border-right: 10px solid rgb(255, 255, 255);
+}
+.body__card_front{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transform: translateZ(60px);
+}
+
+.bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+    border-radius: 20px;
+}
+
+.body__card_back{
+    padding: 40px;
+    text-align: center;
+    transform: translateZ(60px);
+}
+
+.body__card_back p{
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.body__card_back .max{
+    padding: 10px 40px;
+    margin-top: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background: #58B0F6;
+    box-shadow: 1px 1px 30px -5px #58B0F6;
+    border-radius: 10px;
+    transition: box-shadow 600ms;
+}
+
+.body__card_back .max:hover{
+    box-shadow: 1px 1px 30px 0px #449de6;
+}
+
+.gradient-text {
+    background: linear-gradient( var(--violet), var(--turquoise));
+    background-color: var(--violet);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-size: 8rem;
+    height: 9rem;
+    margin-top: 20rem;
+  }
+  
+
+  
+ 

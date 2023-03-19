@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Página web completa</title>
+    <!-- ICONOS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <scrip src="https://kit.fontawesome.com/4db3f232fb.js" crossorigin="anonymous"></scrip> -->
+    <!--SLIDER-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!-- DATATABLES -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+
+    <!-- estilos locales css -->
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="estilos_glosario.css" />
+
+
+</head>
+
+<body class="hidden">
+    <!--Figura Actualizador /*Preloader Guía de Busqueda ----*/-->
+    <div class="centrado" id="onload"></div>
+
+    <!-- 👉 PARTE SUPERIOR DE LA PÁGINA: CONTIENE LA BARRA AZUL= LOGO GOBIERNO Y BUSCADOR -->
+    <div class="barra_azul">
+        <!-- Contenedor Barra Azul -->
+        <div class="azul">
+            <!--Sección Barra Azul + Logo Presidencia-->
+            <div class="contenedor-nav-nacion">
+                <!--Enlaces-->
+                <div class="logo-nacion">
+                    <a href="https://www.gov.co/home/ " target="" arial-label="Portal del Estado Colombiano - GOV.CO ">
+                        <img src="./img/pics/logo_gobierno.png " class="nav_logoG" />
+                    </a>
+                </div>
+                <div style="position:absolute;top:10px;right:8%;z-index:999999;" id="gtranslate_wrapper"><!-- GTranslate: https://gtranslate.io/ -->
+                    <a href="#" onclick="doGTranslate('es|es');return false;" title="Español" class="glink nturl notranslate" role="link">ES</a> <a href="#" onclick="doGTranslate('es|en');return false;" title="English" class="glink nturl notranslate" role="link">EN</a>
+
+                    <style type="text/css">
+                    a.gflag {vertical-align:middle;font-size:16px;padding:1px 0;background-repeat:no-repeat;background-image:url(//gtranslate.net/flags/16.png);}
+                    a.gflag img {border:0;}
+                    a.gflag:hover {background-image:url(//gtranslate.net/flags/16a.png);}
+                    #goog-gt-tt {display:none !important;}
+                    .goog-te-banner-frame {display:none !important;}
+                    .goog-te-menu-value:hover {text-decoration:none !important;}
+                    body {top:0 !important;}
+                    #google_translate_element2 {display:none!important;}
+                    </style>
+
+                    <div id="google_translate_element2"></div>
+                    <script type="text/javascript">
+                    function googleTranslateElementInit2() {new google.translate.TranslateElement({pageLanguage: 'es',autoDisplay: false}, 'google_translate_element2');}
+                    </script><script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+
+
+                    <script type="text/javascript">
+                    /* <![CDATA[ */
+                    eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}',43,43,'||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'),0,{}))
+                    /* ]]> */
+                    </script>
+
+                    
+                    
+                </div>
+                <!--Seccion Barra Azul + Buscador-->
+                <div class="buscardor">
+                    <form action="/" method="post" class="form-inline">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">
+                <div class="glyphicon glyphicon-search"></div>
+              </span>
+                            <input id="mod-search-searchword" name="searchword" placeholder="Buscar" class="form-control" aria-describedby="basic-addon1">
+                        </div>
+                        <input type="hidden" name="task" value="search">
+                        <input type="hidden" name="option" value="com_search">
+                        <input type="hidden" name="Itemid" value="101">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 👉 HEADER DE LA PÁGINA: CONTIENE EL MENÚ Y EL SLIDER DE IMAGENES -->
+    <header class="header">
+        <div class="header1">
+            <h1 class="h1">
+                <a href="https://quindio.gov.co"><img src="img/pics/Banner2.png" class="logo" alt="" /></a>
+            </h1>
+
+            <button class="button">
+        <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+        </svg>
+      </button>
+
+            <nav class="nav_act">
+                <ul class="ul">
+                    <li class="li"><a href="index.html" class="btn-header">Inicio</a></li>
+                    <li class="li"><a href="quienessomos.html" class="btn-header">Quiénes Somos</a></li>
+                    <li class="li"><a href="noticias.html" class="btn-header">Noticias</a></li>
+                    <li class="li"><a href="transparencia.html" class="btn-header">Transparencia</a></li>
+                    <li class="li"><a href="atencionservicios.html" class="btn-header">Atención al Ciudadano</a></li>
+                    <li class="li"><a href="participa.html" class="btn-header">Participa</a></li>
+                    <li class="li"><a href="convocatorias.html" class="btn-header">Convocatorias</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <br>
+        <h3>GLOSARIO</h3>
+       
+        <div class="cont-work-glosario">
+            <div class="img-work" id="glosario">
+                <b><strong>ACCESO:</strong></b> Busca financiar la demanda en educación de estudiantes de bajos recurso.
+                <br>    
+                <br>  
+                <strong>ACELERACIÓN DE APRENDIZAJE:</strong></b> Modelo educativo que busca apoyar a los niños, niñas y jóvenes 
+                entre los 10 y 17 años de edad, que no hayan terminado la básica primaria, que sepan leer y escribir y que se encuentren 
+                en extra edad con el fin de que mejoren su autoestima, desarrollen las competencias de la básica primaria, 
+                permanezcan en la escuela y se niveles para continuar sus estudios.
+                <br>
+                <br>  
+                <strong>ACREDITACIÓN:</strong></b> Proceso mediante el cual una institución o programa educativo obtiene un reconocimiento de alta <br> calidad.
+                <br>
+                <br>  
+                <strong>ALUMNO:</strong></b> Persona que recibe el conocimiento impartido por un docente.
+                <br>
+                <br>  
+                <strong>AULAS DE APOYO:</strong></b> Conjunto de servicio, estrategias y recursos que ofrecen los establecimientos educativos para brindar los soportes que permitan la atención integral de los estudiantes con limitaciones o con capacidades o talentos excepcionales.
+                <br>
+                <br>  
+                <strong>CALENDARIO ACADÉMICO:</strong></b> El sistema de distribución  racional del tiempo destinado a la planeación, 
+                organización, ejecución y evaluación de actividades curriculares en los establecimientos educativos de educación preescolar, básica y media.
+                <br>
+                <br>  
+                <strong>CENTRO EDUCATIVO:</strong></b> Establecimiento educativo rural que ofrece menos de nueve grados de educación.
+                <br>
+                <br>  
+                <strong>CICLO::</strong></b> Es el conjunto de grados que en la educación básica satisfacen los objetivos específicos 
+                definidos en el artículo 21 de la ley general de educación.
+                <br>
+                <br>  
+                <strong>COBERTURA:</strong></b> Cantidad o porcentaje de la totalidad de estudiantes matriculados en el sistema educativo.
+                <br>
+                <br>  
+                <strong>DESERCIÓN ESCOLAR:</strong></b> Se entiende como el abandono del sistema escolar por parte de los estudiantes, 
+                producida por factores tipo social, familiar, individual y del entorno.
+                <br>
+                <br>  
+                <strong>DESERTOR:</strong></b> Corresponde a aquel alumno que por retiro formal o no formal no está 
+                en condiciones de ser evaluado y ha abandonado el sistema educativo.
+                <br>
+                <br>  
+                <strong>DOCENTE:</strong></b> La persona que desarrolla labores académicas directa y personalmente 
+                con los alumnos de los establecimientos educativos en su proceso de aprendizaje, 
+                también son responsables de las actividades curriculares no lectivas complementarias de la función en el aula de clase.
+                <br>
+                <br>  
+                <strong>DIRECTIVO DOCENTE:</strong></b> Es el personal que desempeña actividades de dirección, 
+                planeación y programación en las instituciones educativas y son responsables del funcionamiento de la organización escolar.
+                <br>
+                <br>  
+                <strong>EDUCACIÓN BÁSICA PRIMARIA:</strong></b> Corresponde al ciclo de los cinco (5) primeros grados de la educación básica.
+                <br>
+                <br>  
+                <strong>EDUCACIÓN BÁSICA SECUNDARIA:</strong></b> Corresponde al ciclo de los cuatro (4) primeros grados de la educación básica.
+                <br>
+                <br>  
+                <strong>EDUCACIÓN INICIAL:</strong></b> Periodo de inicio de la acción educativa en función de los niños y niñas.
+                <br>
+                <br>  
+                <strong>EDUCACIÓN MEDIA:</strong></b> Constituye  la culminación, consolidación y avance en el logro de los niveles 
+                anteriores y comprende dos grados, el décimo y undécimo y tiene como fin la preparación para el  ingreso del educando a la educación superior. 
+                <br>
+                <br>  
+                <strong>EDUCACIÓN PARA ADULTOS:</strong></b> Comprende la alfabetización y la educación básica para 
+                jóvenes y adultos que por cualquier circunstancia no ingresaron al servicio educativo o desertaron prematuramente del mismo.
+                <br>
+                <br>  
+                <strong>ESCALAFÓN DOCENTE:</strong></b> Sistema de clasificación de los docentes y directivos docentes 
+                de acuerdo con su formación académica, experiencia, responsabilidad, desempeño y superación de competencias, 
+                constituyendo los distintos grados y niveles que pueden ir alcanzando durante su vida laboral.
+                <br>
+                <br>  
+                <strong>ESCUELA NUEVA:</strong></b> Modelo educativo que permite ofrecer primaria completa en escuelas multigrados con uno o dos maestros.
+                Es un conjunto de personas y bienes promovida por las autoridades públicas o privadas, cuya finalidad será prestar un año de educación preescolar 
+                y nueve grados de educación básica como mínimo y la media.
+                <br>
+                <br>  
+                <strong>INSTITUCIÓN EDUCATIVA:</strong></b> Es un conjunto de personas y bienes promovida por las autoridades públicas o privadas, 
+                cuya finalidad será prestar un año de educación preescolar y nueve grados de educación básica como mínimo y la media.
+                <br>
+                <br>  
+                <strong>PLAN DE ESTUDIOS:</strong></b> Es el esquema estructurado de las áreas obligatorias y fundamentales que forman parte del 
+                currículo de los establecimientos educativos.
+                <br>
+                <br>  
+                <strong>PRIMERA INFANCIA:</strong></b> Es la primera etapa del ciclo de vida que comprende el desarrollo de niños, 
+                niñas desde su gestación hasta los cinco años de vida.
+                <br>
+                <br>  
+                <strong>PROCESO DE MATRÍCULA:</strong></b> Es el conjunto de actividades y procedimientos que apoyan la política de cobertura organizando 
+                y facilitando la continuidad de los estudiantes antiguos y el ingreso de los nuevos en el sistema educativo del país.
+                <br>
+                <br>  
+                <strong>PROYECTO EDUCATIVO INSTITUCIONAL – PEI:</strong></b> Es la carta de navegación de las instituciones educativas en donde se especifica  
+                los principios y fines del establecimiento, la estrategia pedagógica, el reglamento para docentes y estudiantes y sistema de gestión.
+                <br>
+                <br>  
+                <strong>SIMAT:</strong></b> Herramienta informativa que apoya el modelo de gestión de matrícula en las entidades territoriales con el fin de volver más eficiente, 
+                eficaz y efectivo el proceso de asignación de cupos de la educación preescolar, básica y media oficial.
+                <br>
+                <br>  
+                <strong>ZONA RURAL:</strong></b> Si el establecimiento se ubica en la zona rural, como puede ser: “Vereda”, la cual se asimila con inspección, caserío, corregimiento.
+                <br>
+                <br>  
+                <strong>ZONA URBANA:</strong></b> Si la institución Educativa se ubica en la zona urbana de acuerdo a los limites determinados por el Departamento Administrativo de Planeación.
+                
+
+                
+                
+            </div>
+        </div>
+    </main>
+
+    <!--BARRA AZUL - VÍNCULOS DE INTÉRES-->
+    <div class="grupo-0">
+        <div class="box4">
+
+            <div class="col-md-3 padding-col-footer">
+                <h6 class="text-uppercase" id="line"><strong>(+) Vínculos de Interés S.E.D.Q</strong></h6>
+                <ul>
+                    <li class="footer_alcaldia">
+                        <a class="text-white p_footer-p" href="https://www.mineducacion.gov.co/portal/" target="">Ministerio de
+              Educación Nacional</a>
+                    </li>
+                    <li class="footer_alcaldia">
+                        <a class="text-white p_footer-p" href="https://www.alimentosparaaprender.gov.co/">Alimentos para
+              Aprender M.E.N</a>
+                    </li>
+                    <li class="footer_alcaldia">
+                        <a class="text-white p_footer-p" href="">Normatividad S.E.D.Q</a>
+                    </li>
+                    <li class="footer_alcaldia">
+                        <a class="text-white p_footer-p" href=""></a>
+                    </li>
+                    <li class="footer_alcaldia">
+                        <a class="text-white p_footer-p" href="" target=""></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 padding-col-footer">
+                <h6 class="text-uppercase" id="line"><strong>Gobernación del Quindío</strong></h6>
+                <ul>
+                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="http://quindio.gov.co/" target="">Gobernación del Quindío</a></li>
+                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="https://observatorio.quindio.gov.co/" target="">Observatorio Quindío</a></li>
+                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="https://quindio.gov.co/tramites-y-servicios/catalogo-de-tramites-y-servicios/" target="">Guía de
+              Trámites y Servicios</a></li>
+                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="http://45.162.78.186:1882/sevenet/visual/index.php/" target="">Intranet
+              Departamental</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 padding-col-footer">
+                <h6 class="text-uppercase" id="line"><strong>Entidades de Control</strong></h6>
+                <ul>
+                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="https://www.procuraduria.gov.co/" target="">Procuraduría General de la Nación</a></li>
+                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="https://www.contraloria.gov.co/" target="">Contraloría General de la República</a></li>
+                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="http://www.asamblea-quindio.gov.co/" target="">Asamblea Departamental del Quindío</a>
+                    </li>
+                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="https://www.rues.org.co/Veedurias/DetalleVeedurias?CodigoDpto=63" target="">Veedurías
+              del Quindío</a></li>
+                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="https://www.contraloriaquindio.gov.co/" target="">Contraloría Departamental del
+              Quindío</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 padding-col-footer">
+                <h6 class="text-uppercase" id="line"><strong>Gobierno Digital</strong></h6>
+                <ul>
+                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="https://www.mintic.gov.co/" target="">MinTIC</a></li>
+                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="https://presidencia.gov.co/" target="">Presidencia de la República</a></li>
+                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="http://estrategia.gobiernoenlinea.gov.co/" target="">Gobierno Digital</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- INICIO DEL FOOTER -->
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box1">
+                <h2>Secretaria de Educación<br>Departamental del Quindío</h2>
+                <p> <strong>Dirección:</strong> Calle 20 # 13 - 22 Piso 9 y 11 <br>Edificio Gobernación del Quindío
+                    <br>Armenia - Quindío - Colombia<br><br> <strong>Contáctenos:</strong> PBX: (+57) (606) 7359919
+                    <br><br><strong>HORARIO DE ATENCIÓN:</strong> Lunes a Viernes<br> de 7:00 a.m. a 12 m. y de 2:00 p.m. a 6 p.m.
+                    <br><br><b><strong> Electrónico Institucional:</strong></b><a href="mailto:educacion@gobernacionquindio.gov.co"> educacion@gobernacionquindio.gov.co</a>
+                    <br><br><b><strong> Notificaciones Judiciales:</strong></b><a href="mailto:educacionjudicial@gmail.com">
+            educacionjudicial@gmail.com</a>
+                    <br><br><strong>NIT:</strong> 890001639-1
+                    <br><br><strong>www.sedquindio.gov.co</strong>
+                </p>
+            </div>
+            <div class="box2 ">
+                <h2>Nuestras <br>Redes Sociales</h2>
+                <div class="red-social ">
+                    <a href="https://www.facebook.com/educacion.quindio.33 " class="fa fa-facebook fa-3x " title="ASASA"></a>
+                    <a href="https://www.instagram.com/secretariaeducacionquindio/ " class="fa fa-instagram fa-3x "></a>
+                    <a href="https://twitter.com/edu_quindio " class="fa fa-twitter fa-3x "></a>
+                    <a href="https://www.youtube.com/channel/UC0UuMSQPBSQdxpmwuAqN-hg " class="fa fa-youtube fa-3x "></a>
+                </div>
+            </div>
+            <div class="box3 ">
+                <h2>Gobierno<br>Departamental</h2>
+                <figure>
+                    <a href="# ">
+                        <img src="img/pics/LOGOformatos.png " alt="Logo de SLee Dw "></a>
+
+                </figure>
+                <section>
+                    <div class="figuras">
+                        <a title="adal.xls@gmail.com" href="https://correo.gobernacionquindio.gov.co/interface/root#/login" class="fa fa-envelope fa-3x"></a>
+                        <a title="+(57) (6)7417700" href="https://brave.com/es/?ref=iva234" class="fa fa-volume-control-phone fa-3x "></a>
+                        <a title="Chatea con nosotros" href="#" class="fa fa-comments fa-3x "></a>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <div id="nav-final ">
+        <!--seccion barra azul final + logo presidencia + colombia-->
+        <div class="contenedor-nav-nacion-final ">
+            <!--  ↑ arriba -->
+            <div class="btn-up " id="btn-up " style="vertical-align: central; color: #fff !important; ">
+                <button type="button " class="btn-intro-div " style="margin-top: 5px; " ng-click="main.windowTop() " tabindex="1000 ">
+          <i class="icon-icon-8 "></i>
+        </button>
+                <label id="lb-up " style="margin-top: 10px; padding-left: 10px; ">Volver arriba</label>
+
+                <a href="# " class="sp-scroll-up " aria-label="Scroll Up " style="display: block; padding-left: 10px; "><span
+            class="fas fa-angle-up " aria-hidden="true "></span></a>
+            </div>
+            <!--contenedor barra azul-->
+            <div class="flex-agrupa ">
+                <div class="logo-nacion ">
+                    <a href="https://www.gov.co/home/ " target="_blank " arial-label="Portal del Estado Colombiano - GOV.CO ">
+                        <img src="./img/pics/header_govco.png " class="nav_logoG " />
+                    </a>
+                </div>
+                <!--caja de logo-->
+                <div class="logo-colombia ">
+                    <a href="https://www.colombia.co// " target="_blank " arial-label="Portal colombia.co ">
+                        <img src="./img/pics/colombia-co.png " class="nav_logoC " />
+                    </a>
+                </div>
+                <!--caja de logo-->
+            </div>
+        </div>
+    </div>
+
+
+    <div class="derechos ">
+        <a href="https://www.sic.gov.co/politica-privacidad ">
+            <h3>Política de privacidad | Términos y condiciones de uso</h3>
+        </a>
+        <h2>Todos los derechos reservados © 2022</h2>
+    </div>
+    </div>
+
+    <!-- -->
+
+    <!-- SCRITPS -->
+    <script>
+        $(document).ready(function() {
+            $('.slider1').bxSlider({
+                mode: 'fade',
+            });
+            $('.slider2').bxSlider({
+                mode: 'fade',
+            });
+            $('.slider3').bxSlider({
+                mode: 'fade',
+            });
+        });
+    </script>
+
+    <script>
+        window.onload = $(function() {
+            $('.filter').show(function() {
+                $(this).addClass('active').siblings().removeClass('active');
+                let valor = $(this).attr('data-nombre');
+                if (valor == 'somos') {
+                    $('.cont-work ').show('1000');
+
+                } else {
+                    $('.cont-work ').not('.' + valor).hide('1000');
+                    $('.cont-work').filter('.' + valor).show('1000');
+                }
+            });
+        });
+    </script>
+
+    <script src="js/main.js "></script>
+    <script src="js/filtro.js "></script>
+    <script src="js/menu_desplegable.js "></script>
+
+    <!-- Tabla -->
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+    </script>
+    <!-- DATATABLES -->
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js">
+    </script>
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#tablax').DataTable({
+                language: {
+                    processing: "Tratamiento en curso...",
+                    search: "Buscar&nbsp;:",
+                    lengthMenu: "Agrupar de _MENU_ items",
+                    info: "Mostrando del item _START_ al _END_ de un total de _TOTAL_ items",
+                    infoEmpty: "No existen datos.",
+                    infoFiltered: "(filtrado de _MAX_ elementos en total)",
+                    infoPostFix: "",
+                    loadingRecords: "Cargando...",
+                    zeroRecords: "No se encontraron datos con tu busqueda",
+                    emptyTable: "No hay datos disponibles en la tabla.",
+                    paginate: {
+                        first: "Primero",
+                        previous: "Anterior",
+                        next: "Siguiente",
+                        last: "Ultimo"
+                    },
+                    aria: {
+                        sortAscending: ": active para ordenar la columna en orden ascendente",
+                        sortDescending: ": active para ordenar la columna en orden descendente"
+                    }
+                },
+                scrollY: 400,
+                lengthMenu: [
+                    [5, 10, -1],
+                    [10, 25, "All"]
+                ],
+            });
+        });
+    </script>
+
+    <!-- <script src="js/jquery.js "></script> -->
+    <!--NO Ejecutar-->
+
+
+</body>
+
+</html>

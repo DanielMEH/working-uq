@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2? family= Nerko+One & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+/*   @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
+
+main {
+    /* outline: 2px solid rgb(183, 5, 228); */
+    font-family: var(--tipo-principal);
+    font-size: 100%;
+    line-height: 1em;
+    /* min-height: 100vh;  */
+    background-color: #FFFFFF;
+    /* color: var(--negro); */
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main h3 {
+    font-size: 55px;
+    color: #001545;
+    margin: 10px;
+    justify-items: center;
+    text-align: center;
+}
+
+.contenedor h3 {
+    margin-top: 45px;
+    font-size: 30px;
+    color: #001545;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.container {
+    /**/
+    outline: 2px solid rgb(80, 241, 5);
+    width: 95%;
+    margin: 5px;
+    padding: 10px;
+}
+
+#tablax {
+    /* outline: 2px solid rgb(12, 247, 4); */
+    width: 80%;
+}
+
+.titulo th {
+    color: #001545;
+    font-size: 20px;
+}

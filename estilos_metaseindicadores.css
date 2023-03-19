@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2? family= Nerko+One & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+
+main {
+    /*  outline: 2px solid rgb(171, 241, 5); */
+    margin: 5px;
+    font-family: var(--tipo-principal);
+    font-size: 100%;
+    line-height: 1em;
+    /* min-height: 100vh;  */
+    background-color: var(--blanco);
+    color: var(--negro);
+    -webkit-hyphens: auto;
+            hyphens: auto;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+ }
+
+ main strong{
+    font-weight: bolder;
+ }
+ 
+ .cont-work-metaseindicadores {
+     outline: 2px solid red;
+     width: 95%;
+     margin: 15px;
+     padding: 5px;
+
+     outline: 2px solid red;
+     font-size: 25px;
+     text-align: justify;
+     line-height: 1.5;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 600;
+ }
+

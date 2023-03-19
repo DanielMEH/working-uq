@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2? family= Nerko+One & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+/*   @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
+
+main {
+   /*  outline: 2px solid rgb(171, 241, 5); */
+   /*  outline: 2px solid rgb(171, 241, 5); */
+   margin: 5px;
+   font-family: var(--tipo-principal);
+   font-size: 100%;
+   line-height: 1em;
+   /* min-height: 100vh;  */
+   background-color: var(--blanco);
+   color: var(--negro);
+   -webkit-hyphens: auto;
+           hyphens: auto;
+   font-smooth: always;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   display: flex;
+   flex-flow: column;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   align-items: center;
+}
+.work-contenedor {
+   /*  outline: 2px solid red; */
+    width: 95%;
+    margin: 15px;
+    padding: 5px;
+}
+/*Botones Filtros - VERDE -*/
+.botones-work{
+   /*  outline: 2px solid lawngreen; */
+    width: auto;
+    margin-top: 5px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.botones-work li {
+   border: none;
+}
+.filter {
+    /* outline:  1px solid rgb(243, 8, 8); */
+    margin: 5px;
+    padding: 5px;
+}
+.botones-work li:hover {
+    background: rgb(153, 155, 153);
+    cursor: pointer;
+    
+}
+.botones-work .active {
+    background: rgb(153, 155, 153);
+    
+}
+.li .img{
+    width: 100%;
+    height: auto;
+    margin:1px;
+    padding: 1px;
+}
+
+
+/*Botones -NARANJAS*/
+
+.galeria-work {
+   /*  outline: 2px solid rgb(2, 14, 0); */
+    margin-top: 1px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.img-work {
+    /* outline: 2px solid red; */
+    width: 100%;
+    height: auto;   
+}
+ .img-work img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+} 
+.galeria-work-somos {
+   /*  outline: 2px solid rgb(2, 14, 0); */
+    margin-top: 1px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img-work {
+    /* outline: 2px solid red; */
+    width: 100%;
+    height: auto;   
+}
+ .img-work img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+} 
+
+/**/
+.galeria-work-sac{
+  /*   outline: 2px solid rgb(2, 14, 0); */
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.img-work {
+   /*  outline: 2px solid red; */
+    width: 100%;
+    height: auto;   
+}
+ .img-work img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/**/
+.galeria-work-tramites {
+  /*   outline: 2px solid rgb(2, 14, 0); */
+    width: 100%;
+    margin-top: 15px;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.img-work {
+    /* outline: 2px solid red; */
+    width: 100%;
+    height: auto;   
+}
+ .img-work img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}  
+/**/
+.galeria-work-pqr {
+ /*  outline: 2px solid rgb(2, 14, 0); */
+  width: 100%;
+  margin-top: 15px;
+  padding: 15px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.img-work {
+  /* outline: 2px solid red; */
+  width: 100%;
+  height: auto;   
+}
+.img-work img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.work-contenedor h3 {
+    font-size: 30px;
+    color: #001545;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 25px;
+}

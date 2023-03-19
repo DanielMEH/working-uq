@@ -1,0 +1,1361 @@
+@import url('https://fonts.googleapis.com/css2? family= Nerko+One & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+/*   @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
+
+
+/*  👉 Inicio del Reset/*
+
+  Con este reset vamos a resolver:
+    👉 Unificar el uso de Custom Properties
+    👉 Problemas de box-model más generales
+    👉 Problemas con imagenes, vídeos e iconos svg
+    👉 Problemas con tipografías y etiquetas input en formularios
+    👉 Unificar la tipografía de todas las etiquetas de una web
+*/
+
+
+/* Aquí definimos las Custom properties */
+
+:root {
+    --negro: #393939;
+    /* Tipografía */
+    --tipo-principal: Helvetica, Arial, sans-serif;
+    --tipo-secundaria: Verdana;
+    --color1: rgb(245, 133, 6);
+    --color2: rgba(45, 201, 105, 0.801);
+    --color3: rgba(11, 194, 211, 0.623);
+    --fondo: #FFFFFF;
+    --titulos: 33px;
+    --subtitulos: 25px;
+    --margenes: 6px;
+    --espacios: 10px;
+    --espacios-contenido: 45px;
+    --negro: #393939;
+    --gris: #e0dede;
+    --blanco: #ececec;
+    --sombra-ppal: #c9c9c9;
+    --sombra-sec: #ffffff;
+    --borde-negro: #00000050;
+    --marcado: rgb(127, 195, 255);
+    /* Tipografía */
+}
+
+
+/* Las adaptamos al modo oscuro */
+
+@media (prefers-color-scheme: dark) {
+     :root {
+        --negro: #ececec;
+        --blanco: #303030;
+        --sombra-ppal: #242424;
+        --sombra-sec: #3c3c3c;
+        --borde-negro: #FFFFFF50;
+    }
+}
+
+
+/* Opcional */
+
+
+/* Configuramos si un usuario ha activado el modo alto contraste. (WD) */
+
+@media (prefers-contrast: high) {
+     :root {
+        --negro: #ececec;
+        --blanco: #303030;
+        --sombra-ppal: #242424;
+        --sombra-sec: #3c3c3c;
+        --borde-negro: #FFFFFF50;
+    }
+}
+
+
+/* Opcional */
+
+
+/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+
+/* Reseteamos los margin y paddings de todas las etiquetas */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+
+/* Evitamos problemas con las imagenes */
+
+img,
+picture,
+video,
+iframe,
+figure {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    /* opcional */
+    object-fit: cover;
+    /* opcional */
+    object-position: center center;
+}
+
+.contador>a>img {
+    max-width: 100%;
+    width: auto;
+    display: block;
+    /* opcional */
+    object-fit: cover;
+    /* opcional */
+    object-position: center center;
+}
+
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
+
+
+/* ... excepto los que se encuentran en párrafos */
+
+p a {
+    display: inline;
+}
+
+
+/* Quitamos los puntos de los <li> */
+
+li {
+    list-style-type: none;
+}
+
+
+/* Configuramos anclas suaves */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+    font-size: 1em;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+
+/* Configuramos el texto que seleccionamos */
+
+::selection {
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+
+form,
+input,
+textarea,
+select,
+button,
+label {
+    font-family: inherit;
+    font-size: inherit;
+    hyphens: auto;
+    background-color: transparent;
+    color: inherit;
+    display: block;
+    /* opcional */
+    appearance: none;
+}
+
+
+/* Reseteamos las tablas */
+
+table,
+tr,
+td {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* Evitamos problemas con los SVG */
+
+svg {
+    width: 100%;
+    display: block;
+    fill: currentColor;
+}
+
+
+/* (Probándolo, no usar en producción) En el caso de añadir una  */
+
+
+/* p svg{
+    display: inline;
+    width: initial;
+  } */
+
+
+/* Configuramos la tipografía para toda la web */
+
+body {
+    min-height: 100vh;
+    font-size: 100%;
+    font-family: var(--tipo-principal);
+    color: var(--negro);
+    font-family: 'open sans';
+    background: #f8f9fa;
+    /* opcional */
+    line-height: 1.4em;
+    /* opcional */
+    hyphens: auto;
+    /* opcional */
+    font-smooth: always;
+    /* opcional */
+    -webkit-font-smoothing: antialiased;
+    /* opcional */
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/*Fin del Reset*/
+
+
+/* -------------------------------------------------------------------------------------------*/
+
+
+/* -------------------------------------------------------------------------------------------*/
+
+
+/**  👉 Inicio Preloader Guía de Busqueda*/
+
+.hidden {
+    overflow: hidden;
+}
+
+.centrado {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/** Fin Preloader Guía de Busqueda*/
+
+
+/* -------------------------------------------------------------------------------------------*/
+
+
+/* -------------------------------------------------------------------------------------------*/
+
+
+/** 👉 Inicio Header= Barra Azul Contiene Logo Gov.co y Buscar*/
+
+.barra_azul {
+    /*    outline: 2px solid red;  */
+    width: 100%;
+    height: 65px;
+    background: #ffffff;
+}
+
+.azul {
+    /*  outline: 2px solid red;  */
+    margin: auto;
+    padding: auto;
+    width: 100%;
+    height: 65px;
+    background: #FFFFFF;
+    /* top: 0px;
+    position: fixed;
+    z-index: 30;
+    width: 100%;
+    background-color: rgba(255,255,255,0.9); */
+}
+
+/** style buscador y idioma */
+.content_kk{
+
+    display: flex;
+    align-items: center;
+}
+/**Sección Barra Azul + Logo Presidencia**/
+
+.contenedor-nav-nacion {
+    /* outline: 2px solid red;  */
+    background-color: #3366cc;
+    margin: auto;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+   justify-content: space-between;
+    
+}
+
+
+/** Contenedor logo nación*/
+
+.logo-nacion {
+    /* outline: 2px solid rgb(255, 251, 0); */
+    width: 200px;
+    height: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
+
+
+/** Imagen Logo nación*/
+
+.nav_logoG {
+    width: 100%;
+    height: 100%;
+}
+
+
+/** Buiscador de Google*/
+
+.form-control {
+    /* outline: 2px solid rgb(255, 251, 0); */
+    background: #FFFFFF;
+    margin: 0px;
+    padding: 10px;
+    
+    width: 220px;
+    padding: 10px;
+    border-radius: 30px;
+    display: inline-block;
+    font-family: sans-serif;
+    color: #303030;
+    outline: none;
+}
+.form-control:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* .goog-te-gadget .goog-te-combo {
+    margin: 10px 0;
+} */
+
+
+/** Fin Barra Azul */
+
+
+/* -------------------------------------------------------------------------------------------*/
+
+
+/* -------------------------------------------------------------------------------------------*/
+
+
+/** 👉Inicio Header */
+
+
+/*  Código Logo Departamento - SEDQ - Menu */
+
+.logo {
+    /* outline: 2px solid #ececec; */
+    width: 100%;
+    height: 100%;
+}
+
+.li .btn-header {
+    /*  outline: 2px solid #ececec; */
+    width: auto;
+}
+
+.btn-header {
+    /* outline: 2px solid rgb(222, 238, 4); */
+    color: rgb(4, 3, 83);
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.header {
+    /*  outline: 2px solid rgb(126, 170, 3); */
+    width: 100%;
+    background-color: #FFFFFF;
+    
+    /*  color: rgb(7, 7, 7); */
+    /* display: -webkit-box;
+        display: -ms-flexbox; */
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.header1 {
+    /*  outline: 2px solid rgb(126, 170, 3); */
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header .button {
+    outline: 2px solid rgb(8, 1, 99);
+    display: none;
+    cursor: pointer;
+}
+
+
+/*--Media Querys--*/
+
+@media screen and (max-width:1129px) {
+    .header1 {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1129px) {
+    .header .button {
+        display: flex;
+    }
+}
+
+.header .svg {
+    width: 2em;
+    height: 2em;
+    fill: rgb(15, 5, 143);
+}
+
+@media screen and (max-width: 1129px) {
+    .header .nav_act {
+        width: 100%;
+        opacity: 0;
+        height: 0vh;
+        pointer-events: none;
+        overflow: hidden;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .header .nav_act.activo {
+        opacity: 1;
+        height: 50vh;
+        pointer-events: auto;
+    }
+}
+
+.header .ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 720px) {
+    .header .ul {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+.header .li {
+    margin: 0 0.5em;
+}
+
+@media screen and (max-width: 720px) {
+    .header .li {
+        margin: 1em 0;
+    }
+}
+
+
+/** Fin Header */
+
+
+/*  Código Logo Departamento - SEDQ - Menu */
+
+
+/* -------------------------------------------------------------------------------------------*/
+
+
+/* -------------------------------------------------------------------------------------------*/
+
+
+/** 👉 Incio del Main */
+
+main {
+    /* outline: 2px solid rgb(183, 5, 228); */
+    font-family: var(--tipo-principal);
+    font-size: 100%;
+    line-height: 1em;
+    /* min-height: 100vh;  */
+    background-color: #FFf;
+    /* color: var(--negro); */
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main h3 {
+    font-size: 55px;
+    color: #001545;
+    margin: 10px;
+    justify-items: center;
+    text-align: center;
+}
+
+
+/* -------------------------------------------------------------------------------*/
+
+
+/* -------------------------------------------------------------------------------*/
+
+
+/* Galeria de Imágenes*/
+
+
+/* 👉 Visita Enlaces De Tú Interes*/
+
+
+/*Propiedades de los Títulos*/
+
+.contenedor h3 {
+    font-size: 30px;
+    color: #001545;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.contenedor h4 {
+    margin-top: 15px;
+    font-size: 17px;
+    color: #001545;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.contenedor p {
+    font-size: var(--subtitulos);
+    font-weight: 300;
+    color: var(--color1);
+    text-align: center;
+}
+
+.after::after {
+    content: '';
+    display: block;
+    margin: auto;
+    margin-top: var(--espacios);
+    width: 500px;
+    height: 5px;
+    background: var(--color1);
+    margin-bottom: var(--espacios-contenido);
+}
+
+
+/* Imágenes De Tú Intéres*/
+
+.galeria-imagenes {
+    /*   outline: 2px solid rgb(81, 255, 0); */
+    margin: 2px;
+    padding: 5px;
+    width: 65%;
+    /* border-radius: 1em; */
+    background-color: #FFFFFF;
+    /* box-shadow: 1em 1em 2em var(--sombra-ppal), 1em 1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent; */
+    ;
+}
+
+.botones-work {
+    overflow: hidden;
+}
+
+.li {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+}
+.li {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+.line_h{
+    height: 2px;
+    width: 100%;
+    background:#040353;
+    position: absolute;
+    bottom: 0;
+    z-index: 1000;
+    transform: scale(0);
+    transition: 0.5s;
+
+}
+.li:hover .line_h{
+    transform: scale(1);
+    transition: 0.5s;
+}
+.botones-work li {
+    /* outline: 2px solid rgb(21, 5, 243); */
+    margin-left: var(--espacios);
+    margin-bottom: 18px
+    /* var(--espacios-contenido) */
+    ;
+    padding: 12px 12px;
+    border: 1px solid var(--color1);
+    list-style: none;
+    color: var(--color1);
+    border-radius: 40px;
+    transition: all .2s ease-out;
+}
+
+@media screen and (max-width:720px) {
+    .galeria-imagenes {
+        /*  outline: 2px solid rgb(255, 0, 0); */
+        width: 95%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .botones-work {
+        /*Botones Filtros*/
+        /*  outline: 2px solid rgb(21, 5, 243); */
+        width: 100%;
+        margin: auto;
+        padding: 15px;
+        padding-bottom: 0px;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .li {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background: blue;
+    }
+ 
+}
+
+.botones-work li:hover {
+    background: var(--color1);
+    color: #fff;
+    cursor: pointer;
+}
+
+.botones-work .active {
+    background: var(--color1);
+    color: #fff;
+}
+
+.galeria-work {
+    /**/
+    /* outline: 2px solid rgb(2, 14, 0); */
+    margin-top: 1px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont-work {
+    /**/
+    /*  outline: 2px solid red; */
+    width: 100%;
+    margin: 10px;
+    height: auto;
+    max-width: 250px;
+    max-height: 250px;
+    overflow: hidden;
+    box-shadow: 10px 10px 15px #f5f5f5;
+    
+    /* background-color: transparent; */
+}
+
+.img-work {
+    /*  outline: 2px solid red; */
+    width: 100%;
+    height: auto;
+ 
+    position: relative;
+    overflow: hidden;
+}
+
+.img-work img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+
+}
+.lift{
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 0%;
+    display: grid;
+    place-content: center;
+    background: rgba(47, 61, 71, 0.346);
+    transition: all .2s ease-out;
+    border-radius: 6px;
+    
+}
+.img-work:hover .lift{
+    height: 100%;
+    width: 100%;
+    transition: all .2s ease-in;
+}
+.img-work img:hover {
+    
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: 10px 10px 15px #e4e4e4;
+    position: relative;
+}
+
+@media screen and (max-width:720px) {
+    .galeria-work {
+        /* Imagénes */
+        /*  outline: 2px solid rgb(2, 14, 0); */
+        width: 100%;
+        height: auto;
+        margin-top: 1px;
+        padding: 15px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .cont-work {
+        width: 60%;
+        margin: 10px;
+        height: auto;
+        max-width: 150px;
+        max-height: 150px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+/* -------------------------------------------------------------------------------*/
+
+
+/* -------------------------------------------------------------------------------*/
+
+
+/* 👉 Redes Sociales*/
+
+.container_redes {
+    /*   outline: 2px solid rgb(94, 255, 0); */
+    margin: auto;
+    padding: auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-bottom: 15px;
+    /* border-radius: 1em; */
+    background-color: #f2f2f2;
+    /* box-shadow: 1em 1em 2em var(--sombra-ppal), 1em 1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+        ; */
+}
+
+.redes_sociales_video {
+    /*  outline: 2px solid rgba(198, 5, 247, 0.219); */
+    /* background: url(img/programacion2.jpeg); */
+    margin: 10px;
+    padding: 15px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+    /* border-radius: 1em; */
+}
+
+@media screen and (max-width:720px) {
+    .redes_sociales_video {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+}
+
+.redes_sociales_video .facebook h3 {
+    font-size: 17px;
+    color: #001545;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+@media screen and (max-width:720px) {
+    .redes_sociales_video .facebook h3 {
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+}
+
+.redes_sociales_video .instagram h3 {
+    font-size: 17px;
+    color: #001545;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+@media screen and (max-width:720px) {
+    .redes_sociales_video .instagram h3 {
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+}
+
+.redes_sociales_video .twitter h3 {
+    font-size: 17px;
+    color: #001545;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+@media screen and (max-width:720px) {
+    .redes_sociales_video .twitter h3 {
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+}
+
+.container_redes h3 {
+    font-size: 30px;
+    color: #001545;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.container_redes h4 {
+    margin-top: 15px;
+    font-size: 17px;
+    color: #001545;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.redes_sociales_video .facebook {
+    /*  outline: 2px solid rgb(6, 1, 31); */
+    /* box-shadow: 0 1px 14px 2px rgba(231, 209, 8, 0.637); */
+    border-radius: 15px;
+}
+
+.redes_sociales_video .twitter {
+    /* outline: 2px solid rgb(6, 1, 31); */
+    /*  box-shadow: 0 1px 14px 2px rgba(231, 209, 8, 0.637); */
+    border-radius: 15px;
+}
+
+.redes_sociales_video .instagram {
+    /* outline: 2px solid rgb(6, 1, 31); */
+    /*  box-shadow: 0 1px 14px 2px rgba(231, 209, 8, 0.637); */
+    border-radius: 15px;
+}
+
+
+/* -------------------------------------------------------------------------------------------*/
+
+
+/* -------------------------------------------------------------------------------------------*/
+
+
+/** 👉 Incio del Footer */
+
+.pie-pagina {
+    width: 100%;
+    max-width: 100%;
+    height: 450px;
+    /* background-color: #450500;*/
+}
+
+.grupo-0 {
+    /* outline: 2px solid lawngreen; */
+    background-color: #001545;
+    width: 100%;
+    max-width: 100%;
+    height: 180px;
+}
+
+.box4 {
+    /* outline: 2px solid rgb(158, 5, 133); */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.box4 #line {
+    font-family: 'Nerko One', cursive;
+    /*  text-transform: uppercase; */
+    font-size: 20px;
+    line-height: 1.5;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.padding-col-footer {
+    margin: 10px;
+    /* outline: 2px solid rgb(158, 5, 133); */
+}
+
+.box4 strong {
+    font-weight: bolder;
+}
+
+.p_footer-p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 23px;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.p_footer-p:hover {
+    /*  background-image: url(img/pics/Barra\ Logo2.png); */
+    color: rgb(238, 255, 0);
+}
+
+.grupo-1 {
+    /* outline: 2px solid lawngreen; */
+    background-color: #178259 !important;
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1 {
+    /*Datos Secretaría de Educación*/
+    /*  outline: 2px solid powderblue; */
+    width: 30%;
+    height: 90%;
+}
+
+.box1 h2 {
+    font-family: 'Nerko One', cursive;
+    /* text-transform: uppercase; */
+    font-size: 20px;
+    line-height: 1;
+    color: #FFFFFF;
+    margin-bottom: 38px;
+}
+
+.box1 p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.box1 strong {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: bolder;
+}
+
+.box2 {
+    /*Redes Sociales*/
+    /*  outline: 2px solid rgb(1, 47, 53); */
+    width: 20%;
+    height: 90%;
+    line-height: 1;
+}
+
+.box2 h2 {
+    text-align: center;
+    font-family: 'Nerko One', cursive;
+    /* text-transform: uppercase; */
+    line-height: 1;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.box2 .red-social {
+    margin-top: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.box2 .red-social a {
+    /* outline: 2px solid red; */
+    width: 65px;
+    margin: 12px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    color: #178259;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.box2 a:hover {
+    background-image: url(img/pics/Barra\ Logo2.png);
+    /* color: #001545 */
+    color: #FFFFFF;
+}
+
+.box3 {
+    /*Logos*/
+    /*  outline: 2px solid rgb(240, 5, 5); */
+    width: 30%;
+    height: 90%;
+}
+
+.box3 h2 {
+    font-family: 'Nerko One', cursive;
+    /* text-transform: uppercase; */
+    line-height: 1;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.box3 figure {
+    /* outline: 2px solid rgb(245, 241, 10); */
+    margin: auto;
+    padding: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.box3 figure img {
+    /*  outline: 2px solid rgb(158, 5, 133); */
+    margin-left: 28%;
+    width: 45%;
+    height: 45%;
+}
+
+.box3 section {
+    /* outline: 2px solid rgb(29, 241, 9); */
+    margin-top: 18px;
+    padding: 15px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.box3 .figuras {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.box3 section .figuras a {
+    width: 100%;
+    margin: 10px;
+    padding: 5px;
+    background-color: #FFFFFF;
+    color: #178259;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*final footer*/
+
+
+/*media query*/
+
+
+/* + Vínculos de Interes*/
+
+@media screen and (max-width:720px) {
+    .grupo-0 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:720px) {
+    .box4 {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: stretch;
+        align-items: stretch;
+    }
+}
+
+
+/* Footer*/
+
+@media screen and (max-width:720px) {
+    .pie-pagina {
+        width: 100%;
+        height: 110%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:720px) {
+    .grupo-1 {
+        width: 100%;
+        height: 120%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: stretch;
+    }
+}
+
+@media screen and (max-width:720px) {
+    .box3 .figuras {
+        width: 70%;
+        height: 70%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+/**Contenedor barra azul final*/
+
+.contenedor-nav-nacion-final {
+    /* outline: 2px solid red; */
+    background-color: #3366cc;
+    margin: auto;
+    padding: auto;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contenedor-nav-nacion-final .btn-up {
+    /* outline: 2px solid rgb(226, 223, 8); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-agrupa {
+    /* outline: 2px solid rgb(226, 223, 8); */
+    margin: 10px;
+    padding: 25px;
+    width: 19%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/** Contenedor logo nación + colombia*/
+
+.logo-colombia {
+    /*outline: 2px solid rgb(94, 255, 0);*/
+    margin: 0;
+    padding: 0;
+}
+
+
+/** Logo colombia*/
+
+.nav_logoC {
+    max-width: 100px;
+    max-height: 65px;
+}
+
+.derechos {
+    background-color: #5a5a5a;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.derechos a {
+    color: #fff;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+.derechos h2 {
+    color: #fff;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+div#gtranslate_wrapper {
+    background: rgb(255, 255, 255);
+    
+    border-radius: 10px;
+    top: 17px !important;
+    display: flex;
+    margin: 0px 10px;
+    height: 30px;
+}
+
+/** bottom para subir a la pagina principal*/
+.botoomsub{
+    display: none;
+   
+  }
+  .botoomsub.active{
+      display: block;
+  }
+  .botoomsub a{
+      text-decoration: none;
+      position: fixed;
+      bottom: 30px;
+      right: 20px;
+      border-radius: 100%;
+      background: rgb(255, 255, 255);
+      box-shadow: 0px 3px 10px -2px #5c5c5cac;
+      z-index: 200;
+      
+  }

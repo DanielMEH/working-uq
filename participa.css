@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2? family= Nerko+One & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+/*   @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
+
+.galeria-imagenes {
+    /*Código para ampliar o disminuir la caja que contine los botones verdes*/
+    /*  outline: 2px solid rgb(81, 255, 0); */
+    margin: 2px;
+    padding: 5px;
+    max-width: 45%;
+    /* border-radius: 1em; */
+    background-color: #FFFFFF;
+    /* box-shadow: 1em 1em 2em var(--sombra-ppal), 1em 1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent; */
+}
+
+.contenedor p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 22px;
+    line-height: 19px;
+    /*  font-weight: bolder; */
+    text-align: justify;
+    color: #001545;
+    line-height: 1;
+}
+
+@media screen and (max-width: 720px) {
+    .galeria-imagenes {
+        /*Código para ampliar o disminuir la caja que contine los botones verdes*/
+        /*  outline: 2px solid rgb(81, 255, 0); */
+        margin: 2px;
+        padding: 5px;
+        max-width: 95%;
+        /* border-radius: 1em; */
+        background-color: #FFFFFF;
+        /* box-shadow: 1em 1em 2em var(--sombra-ppal), 1em 1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent; */
+    }
+}
