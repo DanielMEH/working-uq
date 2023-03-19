@@ -4,7 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
 /*   @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
-
+body{
+    color: #404040;
+}
 main {
     /* outline: 2px solid rgb(183, 5, 228); */
     font-family: var(--tipo-principal);
@@ -25,6 +27,7 @@ main {
     align-items: center;
 }
 
+
 main h3 {
     font-size: 55px;
     color: #001545;
@@ -36,25 +39,37 @@ main h3 {
 .contenedor h3 {
     margin-top: 45px;
     font-size: 30px;
-    color: #001545;
+    color: #151515;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }
 
 .container {
     /**/
-    outline: 2px solid rgb(80, 241, 5);
+   box-shadow: 0px 0px 30px -15px #ccc;
+
     width: 95%;
     margin: 5px;
     padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 8px;
 }
 
 #tablax {
     /* outline: 2px solid rgb(12, 247, 4); */
-    width: 80%;
+   
 }
 
+
 .titulo th {
-    color: #001545;
-    font-size: 20px;
+    color: #404040;
+    font-size: 14px;
+}
+tbody tr{
+    background-color: #F5F5F5;
+    color: #404040;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+
 }

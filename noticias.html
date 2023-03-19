@@ -14,14 +14,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <!-- estilos locales css -->
-    <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="noticias.css" />
+    <link rel="stylesheet" href="index.css" />
 
 </head>
 
-<body class="hidden">
-    <!--Figura Actualizador /*Preloader Guía de Busqueda ----*/-->
-    <div class="centrado" id="onload"></div>
+<body class="hidden" id="principal">
+
 
      <!-- 👉 PARTE SUPERIOR DE LA PÁGINA: CONTIENE LA BARRA AZUL= LOGO GOBIERNO Y BUSCADOR -->
      <div class="barra_azul">
@@ -60,12 +59,14 @@
                      <!-- GTranslate: https://gtranslate.io/ -->
                      
                     <a href="#" onclick="doGTranslate('es|es');return false;" title="Español"
-                       role="link" style="color: #000; margin-right: 0px; padding: 5px; display: block;">
-                       Español |</a> 
+                       role="link" style="color: #000; margin-right: 0px; padding: 2px; display: block;">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64"><path fill="#2a5f9e" d="M62 32H2c0 5.5 1.5 10.6 4 15h52c2.6-4.4 4-9.5 4-15"/><path fill="#ffe62e" d="M32 2C15.5 2 2 15.4 2 32h60C62 15.4 48.6 2 32 2z"/>
+                        <path fill="#ed4c5c" d="M32 62c11.1 0 20.8-6 26-15H6c5.3 9 14.9 15 26 15"/></svg></a> 
                       <a href="#" onclick="doGTranslate('es|en');
                      return false;" title="English" 
-                         role="link" style="color: #000; margin-right: 0px; padding: 5px; display: block;">
-                         Ingles</a>
+                         role="link" style="color: #000; margin-right: 0px; padding: 2px; display: block;">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64"><path fill="#ed4c5c" d="M48 6.6C43.3 3.7 37.9 2 32 2v4.6h16"/><path fill="#fff" d="M32 11.2h21.6C51.9 9.5 50 7.9 48 6.6H32v4.6z"/><path fill="#ed4c5c" d="M32 15.8h25.3c-1.1-1.7-2.3-3.2-3.6-4.6H32v4.6z"/><path fill="#fff" d="M32 20.4h27.7c-.7-1.6-1.5-3.2-2.4-4.6H32v4.6"/><path fill="#ed4c5c" d="M32 25h29.2c-.4-1.6-.9-3.1-1.5-4.6H32V25z"/><path fill="#fff" d="M32 29.7h29.9c-.1-1.6-.4-3.1-.7-4.6H32v4.6"/><path fill="#ed4c5c" d="M61.9 29.7H32V32H2c0 .8 0 1.5.1 2.3h59.8c.1-.8.1-1.5.1-2.3c0-.8 0-1.6-.1-2.3"/><path fill="#fff" d="M2.8 38.9h58.4c.4-1.5.6-3 .7-4.6H2.1c.1 1.5.3 3.1.7 4.6"/><path fill="#ed4c5c" d="M4.3 43.5h55.4c.6-1.5 1.1-3 1.5-4.6H2.8c.4 1.6.9 3.1 1.5 4.6"/><path fill="#fff" d="M6.7 48.1h50.6c.9-1.5 1.7-3 2.4-4.6H4.3c.7 1.6 1.5 3.1 2.4 4.6"/><path fill="#ed4c5c" d="M10.3 52.7h43.4c1.3-1.4 2.6-3 3.6-4.6H6.7c1 1.7 2.3 3.2 3.6 4.6"/><path fill="#fff" d="M15.9 57.3h32.2c2.1-1.3 3.9-2.9 5.6-4.6H10.3c1.7 1.8 3.6 3.3 5.6 4.6"/><path fill="#ed4c5c" d="M32 62c5.9 0 11.4-1.7 16.1-4.7H15.9c4.7 3 10.2 4.7 16.1 4.7"/><path fill="#428bc1" d="M16 6.6c-2.1 1.3-4 2.9-5.7 4.6c-1.4 1.4-2.6 3-3.6 4.6c-.9 1.5-1.8 3-2.4 4.6c-.6 1.5-1.1 3-1.5 4.6c-.4 1.5-.6 3-.7 4.6c-.1.8-.1 1.6-.1 2.4h30V2c-5.9 0-11.3 1.7-16 4.6"/><path fill="#fff" d="m25 3l.5 1.5H27l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm4 6l.5 1.5H31l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H23l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm4 6l.5 1.5H27l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H19l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H11l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm20 6l.5 1.5H31l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H23l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H15l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm12 6l.5 1.5H27l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H19l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H11l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm2.8-14l1.2-.9l1.2.9l-.5-1.5l1.2-1h-1.5L13 9l-.5 1.5h-1.4l1.2.9l-.5 1.6m-8 12l1.2-.9l1.2.9l-.5-1.5l1.2-1H5.5L5 21l-.5 1.5h-1c0 .1-.1.2-.1.3l.8.6l-.4 1.6"/></svg>
+                        </a>
 
  
                      <style type="text/css">
@@ -636,17 +637,44 @@
         <!--seccion barra azul final + logo presidencia + colombia-->
         <div class="contenedor-nav-nacion-final ">
             <!--  ↑ arriba -->
-            <div class="btn-up " id="btn-up " style="vertical-align: central; color: #fff !important; ">
-                <button type="button " class="btn-intro-div " style="margin-top: 5px; " ng-click="main.windowTop() "
-                    tabindex="1000 ">
-                    <i class="icon-icon-8 "></i>
-                </button>
-                <label id="lb-up " style="margin-top: 10px; padding-left: 10px; ">Volver arriba</label>
-
-                <a href="# " class="sp-scroll-up " aria-label="Scroll Up "
-                    style="display: block; padding-left: 10px; "><span class="fas fa-angle-up "
-                        aria-hidden="true "></span></a>
-            </div>
+            <style>
+                .botoomsub{
+        display: hidden;
+       
+      }
+      .botoomsub.active{
+          display: block;
+      }
+      .botoomsub a{
+          text-decoration: none;
+          position: fixed;
+          bottom: 30px;
+          right: 20px;
+          border-radius: 100%;
+          background: rgb(255, 255, 255);
+          box-shadow: 0px 3px 10px -2px #5c5c5cac;
+          z-index: 200;
+          
+      }
+               </style>
+                <div class="botton__arriba">
+                    <div class="botoomsub"><a href="#principal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24">
+                            <path fill="#000" d="m16.854 13.647l-4.5-4.5a.5.5 0 0 0-.707 0l-4.5 4.5a.5.5 0 0 0 .707.707L12 10.207l4.146 4.147a.498.498 0 0 0 .707 0a.5.5 0 0 0 0-.707z"/></svg>
+                    </a></div>
+                </div>
+                <script>
+                    const botoomsub = document.querySelector('.botoomsub');
+                    const principal = document.querySelector('#principal')
+                    var height = principal.offsetTop
+                    window.addEventListener('scroll',()=>{
+                    if (window.pageYOffset > height) {
+                        botoomsub.classList.add('active')
+                    } else {
+                        botoomsub.classList.remove('active')
+                    }
+                    })
+                </script>
             <!--contenedor barra azul-->
             <div class="flex-agrupa ">
                 <div class="logo-nacion ">

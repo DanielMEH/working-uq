@@ -822,7 +822,7 @@ main h3 {
     position: relative;
 }
 
-@media screen and (max-width:720px) {
+@media screen and (max-width:600px) {
     .galeria-work {
         /* Imagénes */
         /*  outline: 2px solid rgb(2, 14, 0); */
