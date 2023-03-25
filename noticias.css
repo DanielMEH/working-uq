@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 /*   @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
 
@@ -89,6 +90,7 @@
     * {
         animation: none !important;
         transition: none !important;
+        
     }
 }
 
@@ -101,6 +103,8 @@
     border: 0;
     box-sizing: border-box;
     vertical-align: baseline;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 
@@ -615,7 +619,7 @@ main {
     position: relative;
     z-index: 10;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   
   .articulo{
@@ -651,13 +655,7 @@ main {
   
 
   @media screen and (max-width:720px) {
-    .casos {
-        width: 95%;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-    }
+  
   
   @media (min-width: 960px){
     .articulo{
@@ -699,8 +697,8 @@ main {
 
 .card{
     cursor: pointer;
-    width: 300px;
-    height: 350px;
+    width: 250px;
+    height: 300px;
     
     position: relative;
     transform-style: preserve-3d;
@@ -810,4 +808,54 @@ main {
   
 
   
- 
+  @media screen and (max-width:720px) {
+    .casos {
+       display: grid;
+
+       grid-template-columns: repeat(2,1fr);
+    }
+    .card{
+        cursor: pointer;
+        width:190px;
+        height: 300px;
+        
+        position: relative;
+        transform-style: preserve-3d;
+        transition: all 600ms;
+    }
+    
+}
+@media screen and (max-width:1000px) {
+    .casos {
+       display: grid;
+
+       grid-template-columns: repeat(2,1fr);
+    }
+    .card{
+        cursor: pointer;
+        width:280px;
+        height: 300px;
+        
+        position: relative;
+        transform-style: preserve-3d;
+        transition: all 600ms;
+    }
+    
+}
+@media screen and (max-width:655px) {
+    .casos {
+       display: grid;
+
+       grid-template-columns: repeat(1,1fr);
+    }
+    .card{
+        cursor: pointer;
+        width:280px;
+        height: 300px;
+        
+        position: relative;
+        transform-style: preserve-3d;
+        transition: all 600ms;
+    }
+    
+}

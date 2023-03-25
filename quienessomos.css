@@ -2,9 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 /*   @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
 
+*{
+    font-family: 'Roboto', sans-serif;
+
+}
 .galeria-imagenes {
     /*Código para ampliar o disminuir la caja que contine los botones verdes*/
     /*  outline: 2px solid rgb(81, 255, 0); */
