@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 /*   @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
 body{
@@ -40,7 +41,7 @@ main h3 {
     margin-top: 45px;
     font-size: 30px;
     color: #151515;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 600;
 }
 
@@ -69,7 +70,7 @@ tbody tr{
     background-color: #F5F5F5;
     color: #404040;
     font-size: 14px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 600;
 
 }
