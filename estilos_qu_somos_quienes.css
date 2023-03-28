@@ -2,44 +2,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+   
+    font-family: 'Roboto', sans-serif;
 
+}
+.bienestar{
+
+    font-size: 40px;
+    color: #000;
+    margin: 20px;
+    display: block;
+}
 
 main {
     /*  outline: 2px solid rgb(171, 241, 5); */
-    margin: 5px;
-    font-family: var(--tipo-principal);
-    font-size: 100%;
-    line-height: 1em;
-    /* min-height: 100vh;  */
-    background-color: var(--blanco);
-    color: var(--negro);
-    -webkit-hyphens: auto;
-            hyphens: auto;
-    font-smooth: always;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    display: flex;
-    flex-flow: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+   color: #323232;
  }
 
- main strong{
-    font-weight: bolder;
- }
+main a{
+
+    color: rgba(11, 63, 135, 0.99);
+}
  
- .cont-work-qu_somos_quienes {
-     outline: 2px solid red;
+ .cont-work-bienestar_social {
      width: 95%;
      margin: 15px;
      padding: 5px;
-
-     outline: 2px solid red;
      font-size: 25px;
-     text-align: justify;
+    
+     box-shadow: 0px 15px 30px #ccc;
+
+     border-radius: 10px;
      line-height: 1.5;
-     font-family: 'Montserrat', sans-serif;
+     font-family: 'Roboto', sans-serif;
      font-weight: 600;
+     padding: 15px;
  }
 
+@media screen and (max-width:500px) {
+
+    .cont-work-bienestar_social {
+        width: 95%;
+        margin: auto;
+        padding: 5px;
+        font-size: 15px;
+       
+        box-shadow: 0px 15px 30px #ccc;
+   
+        border-radius: 10px;
+        line-height: 1.5;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    .bienestar{
+
+        font-size: 40px;
+        color: #000;
+        margin: 20px;
+        display: block;
+    }
+    .bienestar{
+
+        font-size: 30px;
+        color: #000;
+        margin: 20px;
+        display: block;
+    }
+    
+}
+
+.img_l{
+
+    width: 200px;
+}
