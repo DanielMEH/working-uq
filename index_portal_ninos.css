@@ -1,70 +1,330 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 .interfaz1 {
-    /*  outline: 2px solid red; */
-    height: 100%;
-    background-repeat: no-repeat;
-    background: url(img/portal_ninos/5453407.jpg) no-repeat center center fixed;
-    background-size: 100% 100%;
+  /*  outline: 2px solid red; */
+  height: 100%;
+  background-repeat: no-repeat;
+  background: url(img/portal_ninos/5453407.jpg) no-repeat center center fixed;
+  background-size: 100% 100%;
 }
 
 .interfaz11 {
-    /* outline: 2px solid rgb(6, 0, 12); */
-    margin: 25px 0px 25px 45px;
-    padding: 15px;
-    width: 95%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+  /* outline: 2px solid rgb(6, 0, 12); */
+  margin: 25px 0px 25px 45px;
+  padding: 15px;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .img {
-    /* outline: 2px solid rgb(245, 5, 77); */
-    width: 40%;
-
+  /* outline: 2px solid rgb(245, 5, 77); */
+  width: 40%;
 }
 
 .mensaje {
-    /* outline: 2px solid rgb(49, 5, 245); */
-    width: 58%;
+  /* outline: 2px solid rgb(49, 5, 245); */
+  width: 58%;
 }
 
 .titulo {
-    /*   outline: 2px solid rgb(237, 5, 245); */
-    font: 32px/1.2 'Quicksand', sans-serif;
-    font-weight: 500;
-    margin-bottom: 40px;
-    color: #fff;
+  /*   outline: 2px solid rgb(237, 5, 245); */
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  margin-bottom: 40px;
+  font-size: 38px;
+  color: #fff;
 }
 
 .subtitulo {
-    /*  outline: 2px solid rgb(237, 5, 245); */
-    font: 65px/1.2 'Fredoka One', sans-serif;
-    line-height: 78px;
-    color: #fff;
-    text-align: left;
-    letter-spacing: normal;
+  /*  outline: 2px solid rgb(237, 5, 245); */
+  font: 65px/1.2 "Fredoka One", sans-serif;
+  line-height: 78px;
+  color: #fff;
+  text-align: left;
+  letter-spacing: normal;
 }
 
 .descripcion {
-    /*  outline: 2px solid rgb(237, 5, 245); */
-    font: 19px/1.5 'Quicksand', sans-serif;
-    font-weight: 500;
-    margin-top: 20px;
-    color: #042363;
-    text-align: justify;
-    letter-spacing: normal;
+  /*  outline: 2px solid rgb(237, 5, 245); */
+  font: 19px/1.5 "Quicksand", sans-serif;
+  font-weight: 500;
+  margin-top: 20px;
+  color: #042363;
+  text-align: justify;
+  letter-spacing: normal;
 }
 
 /* ---------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------- */
 
 .interfaz2 {
+  /*  outline: 2px solid red; */
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background: url(img/portal_ninos/5429750.jpg) no-repeat center center fixed;
+  background-size: 100% 100%;
+  font-family: "Righteous", cursive;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 25px 0px 25px 45px;
+  padding: 15px;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.container .card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  background: #001545;
+  border-radius: 15px;
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+}
+.container .card .face {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .card .face.face1 {
+  box-sizing: border-box;
+  padding: 20px;
+}
+.container .card .face.face1 h2 {
+  margin: 0;
+  padding: 0;
+}
+.container .card .face.face1 .java {
+  background-color: #fffc00;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: justify;
+  letter-spacing: normal;
+}
+.container .card .face.face1 .python {
+  background-color: #00fffc;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: justify;
+  letter-spacing: normal;
+}
+
+.container .card .face.face1 .cSharp {
+  background-color: #fc00ff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: justify;
+  letter-spacing: normal;
+}
+.container .card .face.face2 {
+  transition: 0.5s;
+}
+.container .card .face.face2 h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 65px;
+  line-height: 1.2;
+  text-align: center;
+  color: #fff;
+  transition: 0.5s;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+.container .card:hover .face.face2 {
+  height: 60px;
+}
+.container .card:hover .face.face2 h2 {
+  font-size: 2em;
+}
+.container .card:nth-child(1) .face.face2 {
+  background-image: linear-gradient(
+    40deg,
+    #fffc00 0%,
+    #fc00ff 45%,
+    #00fffc 100%
+  );
+  border-radius: 15px;
+}
+.container .card:nth-child(2) .face.face2 {
+  background-image: linear-gradient(
+    40deg,
+    #fc00ff 0%,
+    #00fffc 45%,
+    #fffc00 100%
+  );
+  border-radius: 15px;
+}
+.container .card:nth-child(3) .face.face2 {
+  background-image: linear-gradient(
+    40deg,
+    #00fffc 0%,
+    #fc00ff 45%,
+    #fffc00 100%
+  );
+  border-radius: 15px;
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------- */
+
+.interfaz3 {
+  /*  outline: 2px solid red; */
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background: url(img/portal_ninos/5453407.jpg) no-repeat center center fixed;
+  background-size: 100% 100%;
+}
+
+.interfaz13 {
+  /* outline: 2px solid rgb(6, 0, 12); */
+  margin: 25px 0px 25px 45px;
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.tv {
+  /* outline: 2px solid rgb(245, 5, 77);  */
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.tv img {
+  /* outline: 2px solid rgb(247, 4, 4); */
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.tv1 {
+  /* outline: 2px solid black; */
+  width: 32%;
+  position: absolute;
+  top: 48%;
+  left: 10.5%;
+  border: none;
+}
+
+.mensaje3 {
+  /*   outline: 2px solid rgb(49, 5, 245); */
+  margin-top: 100px;
+  width: 45%;
+}
+
+.titulo3 {
+  /*   outline: 2px solid rgb(237, 5, 245); */
+  font: 32px/1.2 "Quicksand", sans-serif;
+  font-weight: 500;
+  margin-bottom: 45px;
+  color: #fff;
+}
+
+.subtitulo3 {
+  /* outline: 2px solid rgb(237, 5, 245); */
+  font: 65px/1.2 "Fredoka One", sans-serif;
+  line-height: 65px;
+  color: #fff;
+  text-align: left;
+  letter-spacing: normal;
+}
+
+.descripcion3 {
+  /*  outline: 2px solid rgb(237, 5, 245); */
+  font: 19px/1.5 "Quicksand", sans-serif;
+  font-weight: 500;
+  margin-top: 20px;
+  color: #192744;
+  text-align: justify;
+  letter-spacing: normal;
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------- */
+
+.interfaz4 {
+  /*  outline: 2px solid red; */
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background: url(img/portal_ninos/5429750.jpg);
+  background-size: 100% 100%;
+}
+
+.interfaz14 {
+  /* outline: 2px solid rgb(6, 0, 12); */
+  margin: 25px 0px 25px 45px;
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1400px) {
+  .mensaje {
+    /* outline: 2px solid rgb(49, 5, 245); */
+    width: 4 8%;
+  }
+  .interfaz11 {
+    /* outline: 2px solid rgb(6, 0, 12); */
+    margin: 25px 0px 25px 45px;
+    padding: 15px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .img {
+    /* outline: 2px solid rgb(245, 5, 77); */
+    width: 70%;
+  }
+  .subtitulo {
+    /*  outline: 2px solid rgb(237, 5, 245); */
+    font: 58px/1.2 "Fredoka One", sans-serif;
+    line-height: 78px;
+    color: #fff;
+    text-align: left;
+    letter-spacing: normal;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .interfaz2 {
     /*  outline: 2px solid red; */
     width: 100%;
     height: 100%;
@@ -73,18 +333,19 @@
     background-size: 100% 100%;
     font-family: "Righteous", cursive;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-
+  }
 }
 
-.container {
+@media screen and (max-width: 1000px) {
+  .container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin: 25px 0px 25px 45px;
+    margin: 10px;
     padding: 15px;
     width: 95%;
     height: 100%;
@@ -92,17 +353,19 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-}
-.container .card {
+  }
+
+  .container .card {
     position: relative;
-    width: 300px;
-    height: 400px;
+    width: 250px;
+    height: 340px;
     margin: 0 auto;
     background: #001545;
     border-radius: 15px;
     box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
-}
-.container .card .face {
+  }
+
+  .container .card .face {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -111,179 +374,198 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.container .card .face.face1 {
-    box-sizing: border-box;
-    padding: 20px;
-}
-.container .card .face.face1 h2 {
-    margin: 0;
-    padding: 0;
-}
-.container .card .face.face1 .java {
-    background-color: #fffc00;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: justify;
-    letter-spacing: normal;
-}
-.container .card .face.face1 .python {
-    background-color: #00fffc;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: justify;
-    letter-spacing: normal;
+  }
 }
 
-.container .card .face.face1 .cSharp {
-    background-color: #fc00ff;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: justify;
-    letter-spacing: normal;
-}
-.container .card .face.face2 {
-    transition: 0.5s;
-}
-.container .card .face.face2 h2 {
+@media screen and (max-width: 840px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    padding: 15px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .container .card {
+    overflow-y: scroll;
+    position: relative;
+    width: 200px;
+    height: 300px;
+    margin: 0 auto;
+    background: #001545;
+    border-radius: 15px;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+  }
+
+  .container .card .face {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .card .face.face2 h2 {
     margin: 0;
     padding: 0;
-    font-size: 65px;
+    font-size: 30px;
     line-height: 1.2;
     text-align: center;
     color: #fff;
     transition: 0.5s;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 10;
-}
-.container .card:hover .face.face2 {
-    height: 60px;
-}
-.container .card:hover .face.face2 h2 {
-    font-size: 2em;
-}
-.container .card:nth-child(1) .face.face2 {
-    background-image: linear-gradient(40deg,
-            #fffc00 0%,
-            #fc00ff 45%,
-            #00fffc 100%);
-    border-radius: 15px;
-}
-.container .card:nth-child(2) .face.face2 {
-    background-image: linear-gradient(40deg,
-            #fc00ff 0%,
-            #00fffc 45%,
-            #fffc00 100%);
-    border-radius: 15px;
-}
-.container .card:nth-child(3) .face.face2 {
-    background-image: linear-gradient(40deg,
-            #00fffc 0%,
-            #fc00ff 45%,
-            #fffc00 100%);
-    border-radius: 15px;
+  }
 }
 
-/* ---------------------------------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------------------------------- */
-
-.interfaz3 {
+@media screen and (max-width: 725px) {
+  .interfaz2 {
     /*  outline: 2px solid red; */
-    height: 100%;
     width: 100%;
+    height: 100%;
     background-repeat: no-repeat;
-    background:  url(img/portal_ninos/5453407.jpg)no-repeat center center fixed;
+    background: url(img/portal_ninos/5429750.jpg) no-repeat center center fixed;
     background-size: 100% 100%;
+    font-family: "Righteous", cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow-x: scroll;
+  }
 }
 
-.interfaz13 {
+@media screen and (max-width: 550px) {
+  .container {
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    padding: 15px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .container .card {
+    overflow-y: scroll;
+    position: relative;
+    width: 90%;
+    height: 300px;
+    
+    background: #001545;
+    border-radius: 15px;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+  }
+
+  .interfaz13 {
     /* outline: 2px solid rgb(6, 0, 12); */
-    margin: 25px 0px 25px 45px;
+   
     padding: 15px;
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-}
-
-.tv {
-    /* outline: 2px solid rgb(245, 5, 77);  */
-    width: 50%;
-    justify-content: center;
-    align-items: center;
-} 
-
-.tv img{
-    /* outline: 2px solid rgb(247, 4, 4); */
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-.tv1{
-    /* outline: 2px solid black; */
-    width: 32%;
-    position: absolute;
-    top: 48%;
-    left:10.5%;
-    border:none;    
-}
-
-.mensaje3 {
-  /*   outline: 2px solid rgb(49, 5, 245); */
-  margin-top: 100px;
-    width: 45%;    
-}
-
-.titulo3 {
-    /*   outline: 2px solid rgb(237, 5, 245); */
-    font: 32px/1.2 'Quicksand', sans-serif;
-    font-weight: 500;
-    margin-bottom: 45px;
-    color: #fff;
-}
-
-.subtitulo3{
+    margin: auto;
+  }
+  .subtitulo3{
     /* outline: 2px solid rgb(237, 5, 245); */
-    font:65px/1.2 'Fredoka One', sans-serif;
-    line-height: 65px;
+    font:20px/1.2 'Fredoka One', sans-serif;
+    
     color: #fff;
     text-align: left;
     letter-spacing: normal;
 }
 
-.descripcion3 {
-    /*  outline: 2px solid rgb(237, 5, 245); */
-    font: 19px/1.5 'Quicksand', sans-serif;
+.subtitulo {
+  /*  outline: 2px solid rgb(237, 5, 245); */
+  font: 20px/1.2 "Fredoka One", sans-serif;
+  line-height: 20px;
+  color: #fff;
+  text-align: left;
+  letter-spacing: normal;
+}
+
+.interfaz11 {
+  /* outline: 2px solid rgb(6, 0, 12); */
+  margin: 0px 0px 0px 0px;
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.mensaje {
+    
+     width: 100%; 
+}
+
+.titulo {
+    /* outline: 2px solid rgb(237, 5, 245); */
+    font-family: "Roboto", sans-serif;
     font-weight: 500;
-    margin-top: 20px;
-    color: #192744;
-    text-align: justify;
-    letter-spacing: normal;
+    margin-bottom: 40px;
+    font-size: 38px;
+    color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    margin: 30px;
 }
-
-/* ---------------------------------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------------------------------- */
-
-.interfaz4 {
-    /*  outline: 2px solid red; */
-    height: 100%;
+.container .card {
+    overflow-y: scroll;
+    position: relative;
     width: 100%;
-    background-repeat: no-repeat;
-    background:  url(img/portal_ninos/5429750.jpg);
-    background-size: 100% 100%;
+    height: 300px;
+    background: #001545;
+    border-radius: 15px;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+    margin: 10px 0px;
 }
-
-.interfaz14 {
-    /* outline: 2px solid rgb(6, 0, 12); */
-    margin: 25px 0px 25px 45px;
-    padding: 15px;
+.mensaje3 {
+    /* outline: 2px solid rgb(49, 5, 245); */
+    margin-top: 100px;
     width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
+}
+.tv {
+    /* outline: 2px solid rgb(245, 5, 77); */
+    width: 100%;
     justify-content: center;
     align-items: center;
+
+}
+.tv img {
+    /* outline: 2px solid rgb(247, 4, 4); */
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.tv1 {
+    /* outline: 2px solid black; */
+    /* width: 32%; */
+    position: relative; 
+    /* top: 48%; */
+   width: 100%;
+    /* border: none; */
+    border-radius: 10px;
+    overflow: hidden;
+    left: 0%
+}
 }
