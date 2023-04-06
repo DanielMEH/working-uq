@@ -11,7 +11,6 @@ $(document).ready(function () {
 
 
 
-
     /*-------F/ AHMED HIJAZI /*-------*/
     function paginationShow() {
         if ($("#" + HZpaginationId).children().length > 8) {
