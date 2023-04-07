@@ -5,10 +5,10 @@
 
 /*Portada*/
 html,
-    body {
-      position: relative;
-      height: 100%;
-    }
+body {
+  position: relative;
+  height: 100%;
+}
 :root {
   --primario: #e23939;
   --gris-claro: #b8b8b8;
@@ -319,6 +319,9 @@ article img {
   .categorias {
     grid-template-columns: 1fr;
   }
+  .imag img {
+    height: 40vh;
+  }
   .counter {
     display: table-cell;
     margin: 1.5%;
@@ -370,7 +373,7 @@ article img {
     margin-bottom: 40px;
     padding-bottom: 20px;
     background: #fff;
-}
+  }
 }
 
 .swiper {
@@ -380,22 +383,20 @@ article img {
   padding-bottom: 50px;
 }
 
- .swiper {
-      width: 100%;
-      padding-top: 50px;
-      padding-bottom: 50px;
-    }
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 
-    .swiper-slide {
-      background-position: center;
-      background-size: cover;
-      width: 300px;
-      height: 300px;
-    }
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
 
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-    }
-
-
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
