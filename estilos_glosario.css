@@ -359,6 +359,18 @@ article img {
     overflow: hidden;
     background: #fff;
   }
+  .container-aside aside {
+    width: 100%;
+    border-right: 6px;
+    box-shadow: 0 0 20px -20px black;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-left: 0px;
+    border: 1px solid #ccc;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    background: #fff;
+}
 }
 
 .swiper {
@@ -385,3 +397,5 @@ article img {
       display: block;
       width: 100%;
     }
+
+
