@@ -16,6 +16,7 @@
     <!-- DATATABLES -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
     <!-- estilos locales css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="estilos_glosario.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.0/swiper-bundle.css">
@@ -195,7 +196,7 @@
         
                     <h1>Glosario</h1>
         
-                    <div class="container ju">
+                    <div class="container ju" data-aos="fade-right">
                         <div class="categorias" id="categorias">
                             <div class="categoria activa" data-categoria="metodos-pago">
                                 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
@@ -331,7 +332,7 @@
                     
                     <div class="div-content-1">
                        <h1 style="text-align: center; margin: 10px 0px;">Suscribciones</h1>
-        <section class="container-l">
+        <section class="container-l" data-aos="zoom-in">
 
         
             <div class="counter" data-count="45">0</div>
@@ -362,13 +363,13 @@
                 });
             </script>
         </section>
-        <div class="imag">
+        <div class="imag" data-aos="fade-right">
             
                 <img src="licenesImg/education.png" alt="">
            
         </div>
      
-        <div class="swiper mySwiper">
+        <div class="swiper mySwiper" data-aos="fade-right">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
@@ -409,7 +410,7 @@
         
                 <div class="container-aside">
         
-                    <aside>
+                    <aside data-aos="fade-left">
                         <img src="img/noticias/clasificatorios.jpeg" alt="">
                         <h2>Vision</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quo, vel officiis voluptas minima at
@@ -417,7 +418,7 @@
                         <a href="#"><button>leer más</button></a>
                     </aside>
         
-                    <aside>
+                    <aside data-aos="fade-left">
                         <img src="img/noticias/Matriculasya.png" alt="">
                         <h2>Misión</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quo, vel officiis voluptas minima at
@@ -427,7 +428,7 @@
         
                     </aside>
         
-                    <aside>
+                    <aside data-aos="fade-left">
                         <img src="img/index_de_tu_interes/Educación en Cifras.jpeg" alt="">
                         <h2>Valores</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quo, vel officiis voluptas minima at
@@ -726,7 +727,12 @@
             },
         });
 </script>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1200,
+    });
+</script>
 </body>
 
 </html>
