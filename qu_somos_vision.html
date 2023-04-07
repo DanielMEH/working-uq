@@ -15,17 +15,17 @@
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <!-- DATATABLES -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
-
     <!-- estilos locales css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="estilos_qu_somos_vision.css" />
-
+    <link rel="stylesheet" href="estilos_glosario.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.0/swiper-bundle.css">
 
 </head>
 
 <body class="hidden" id="principal">
-     <!-- 👉 PARTE SUPERIOR DE LA PÁGINA: CONTIENE LA BARRA AZUL= LOGO GOBIERNO Y BUSCADOR -->
-     <div class="barra_azul">
+    <!-- 👉 PARTE SUPERIOR DE LA PÁGINA: CONTIENE LA BARRA AZUL= LOGO GOBIERNO Y BUSCADOR -->
+    <div class="barra_azul">
         <!-- Contenedor Barra Azul -->
         <div class="azul">
             <!--Sección Barra Azul + Logo Presidencia-->
@@ -38,117 +38,139 @@
                 </div>
 
                 <!--Seccion Barra Azul + Buscador-->
-              <div class="content_kk">
-                <div class="buscardor">
-                    <form action="/" method="post" class="form-inline">
-                        <div class="input-group">
-                            <span class="input-group-addon" id="basic-addon1">
-                           </span>
+                <div class="content_kk">
+                    <div class="buscardor">
+                        <form action="/" method="post" class="form-inline">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">
+                                </span>
                                 <div class="glyphicon glyphicon-search">
                                 </div>
-                            
-                            <input id="mod-search-searchword" name="searchword" 
-                            placeholder="Buscar...." class="form-control p-2 h-12 bg-red-500"
-                             aria-describedby="basic-addon1">
-                        </div>
-                        <input type="hidden" name="task" value="search">
-                        <input type="hidden" name="option" value="com_search">
-                        <input type="hidden" name="Itemid" value="101">
-                    </form>
-                </div>
-                <div  id="gtranslate_wrapper"
-                >
-                     <!-- GTranslate: https://gtranslate.io/ -->
-                     
-                    <a href="#" onclick="doGTranslate('es|es');return false;" title="Español"
-                       role="link" style="color: #000; margin-right: 0px; padding: 2px; display: block;">
-                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64"><path fill="#2a5f9e" d="M62 32H2c0 5.5 1.5 10.6 4 15h52c2.6-4.4 4-9.5 4-15"/><path fill="#ffe62e" d="M32 2C15.5 2 2 15.4 2 32h60C62 15.4 48.6 2 32 2z"/>
-                        <path fill="#ed4c5c" d="M32 62c11.1 0 20.8-6 26-15H6c5.3 9 14.9 15 26 15"/></svg></a> 
-                      <a href="#" onclick="doGTranslate('es|en');
-                     return false;" title="English" 
-                         role="link" style="color: #000; margin-right: 0px; padding: 2px; display: block;">
-                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64"><path fill="#ed4c5c" d="M48 6.6C43.3 3.7 37.9 2 32 2v4.6h16"/><path fill="#fff" d="M32 11.2h21.6C51.9 9.5 50 7.9 48 6.6H32v4.6z"/><path fill="#ed4c5c" d="M32 15.8h25.3c-1.1-1.7-2.3-3.2-3.6-4.6H32v4.6z"/><path fill="#fff" d="M32 20.4h27.7c-.7-1.6-1.5-3.2-2.4-4.6H32v4.6"/><path fill="#ed4c5c" d="M32 25h29.2c-.4-1.6-.9-3.1-1.5-4.6H32V25z"/><path fill="#fff" d="M32 29.7h29.9c-.1-1.6-.4-3.1-.7-4.6H32v4.6"/><path fill="#ed4c5c" d="M61.9 29.7H32V32H2c0 .8 0 1.5.1 2.3h59.8c.1-.8.1-1.5.1-2.3c0-.8 0-1.6-.1-2.3"/><path fill="#fff" d="M2.8 38.9h58.4c.4-1.5.6-3 .7-4.6H2.1c.1 1.5.3 3.1.7 4.6"/><path fill="#ed4c5c" d="M4.3 43.5h55.4c.6-1.5 1.1-3 1.5-4.6H2.8c.4 1.6.9 3.1 1.5 4.6"/><path fill="#fff" d="M6.7 48.1h50.6c.9-1.5 1.7-3 2.4-4.6H4.3c.7 1.6 1.5 3.1 2.4 4.6"/><path fill="#ed4c5c" d="M10.3 52.7h43.4c1.3-1.4 2.6-3 3.6-4.6H6.7c1 1.7 2.3 3.2 3.6 4.6"/><path fill="#fff" d="M15.9 57.3h32.2c2.1-1.3 3.9-2.9 5.6-4.6H10.3c1.7 1.8 3.6 3.3 5.6 4.6"/><path fill="#ed4c5c" d="M32 62c5.9 0 11.4-1.7 16.1-4.7H15.9c4.7 3 10.2 4.7 16.1 4.7"/><path fill="#428bc1" d="M16 6.6c-2.1 1.3-4 2.9-5.7 4.6c-1.4 1.4-2.6 3-3.6 4.6c-.9 1.5-1.8 3-2.4 4.6c-.6 1.5-1.1 3-1.5 4.6c-.4 1.5-.6 3-.7 4.6c-.1.8-.1 1.6-.1 2.4h30V2c-5.9 0-11.3 1.7-16 4.6"/><path fill="#fff" d="m25 3l.5 1.5H27l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm4 6l.5 1.5H31l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H23l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm4 6l.5 1.5H27l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H19l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H11l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm20 6l.5 1.5H31l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H23l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H15l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm12 6l.5 1.5H27l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H19l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H11l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm2.8-14l1.2-.9l1.2.9l-.5-1.5l1.2-1h-1.5L13 9l-.5 1.5h-1.4l1.2.9l-.5 1.6m-8 12l1.2-.9l1.2.9l-.5-1.5l1.2-1H5.5L5 21l-.5 1.5h-1c0 .1-.1.2-.1.3l.8.6l-.4 1.6"/></svg>
+
+                                <input id="mod-search-searchword" name="searchword" placeholder="Buscar...."
+                                    class="form-control p-2 h-12 bg-red-500" aria-describedby="basic-addon1">
+                            </div>
+                            <input type="hidden" name="task" value="search">
+                            <input type="hidden" name="option" value="com_search">
+                            <input type="hidden" name="Itemid" value="101">
+                        </form>
+                    </div>
+                    <div id="gtranslate_wrapper">
+                        <!-- GTranslate: https://gtranslate.io/ -->
+
+                        <a href="#" onclick="doGTranslate('es|es');return false;" title="Español" role="link"
+                            style="color: #000; margin-right: 0px; padding: 2px; display: block;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64">
+                                <path fill="#2a5f9e" d="M62 32H2c0 5.5 1.5 10.6 4 15h52c2.6-4.4 4-9.5 4-15" />
+                                <path fill="#ffe62e" d="M32 2C15.5 2 2 15.4 2 32h60C62 15.4 48.6 2 32 2z" />
+                                <path fill="#ed4c5c" d="M32 62c11.1 0 20.8-6 26-15H6c5.3 9 14.9 15 26 15" />
+                            </svg></a>
+                        <a href="#" onclick="doGTranslate('es|en');
+                 return false;" title="English" role="link"
+                            style="color: #000; margin-right: 0px; padding: 2px; display: block;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64">
+                                <path fill="#ed4c5c" d="M48 6.6C43.3 3.7 37.9 2 32 2v4.6h16" />
+                                <path fill="#fff" d="M32 11.2h21.6C51.9 9.5 50 7.9 48 6.6H32v4.6z" />
+                                <path fill="#ed4c5c" d="M32 15.8h25.3c-1.1-1.7-2.3-3.2-3.6-4.6H32v4.6z" />
+                                <path fill="#fff" d="M32 20.4h27.7c-.7-1.6-1.5-3.2-2.4-4.6H32v4.6" />
+                                <path fill="#ed4c5c" d="M32 25h29.2c-.4-1.6-.9-3.1-1.5-4.6H32V25z" />
+                                <path fill="#fff" d="M32 29.7h29.9c-.1-1.6-.4-3.1-.7-4.6H32v4.6" />
+                                <path fill="#ed4c5c"
+                                    d="M61.9 29.7H32V32H2c0 .8 0 1.5.1 2.3h59.8c.1-.8.1-1.5.1-2.3c0-.8 0-1.6-.1-2.3" />
+                                <path fill="#fff" d="M2.8 38.9h58.4c.4-1.5.6-3 .7-4.6H2.1c.1 1.5.3 3.1.7 4.6" />
+                                <path fill="#ed4c5c" d="M4.3 43.5h55.4c.6-1.5 1.1-3 1.5-4.6H2.8c.4 1.6.9 3.1 1.5 4.6" />
+                                <path fill="#fff" d="M6.7 48.1h50.6c.9-1.5 1.7-3 2.4-4.6H4.3c.7 1.6 1.5 3.1 2.4 4.6" />
+                                <path fill="#ed4c5c"
+                                    d="M10.3 52.7h43.4c1.3-1.4 2.6-3 3.6-4.6H6.7c1 1.7 2.3 3.2 3.6 4.6" />
+                                <path fill="#fff"
+                                    d="M15.9 57.3h32.2c2.1-1.3 3.9-2.9 5.6-4.6H10.3c1.7 1.8 3.6 3.3 5.6 4.6" />
+                                <path fill="#ed4c5c" d="M32 62c5.9 0 11.4-1.7 16.1-4.7H15.9c4.7 3 10.2 4.7 16.1 4.7" />
+                                <path fill="#428bc1"
+                                    d="M16 6.6c-2.1 1.3-4 2.9-5.7 4.6c-1.4 1.4-2.6 3-3.6 4.6c-.9 1.5-1.8 3-2.4 4.6c-.6 1.5-1.1 3-1.5 4.6c-.4 1.5-.6 3-.7 4.6c-.1.8-.1 1.6-.1 2.4h30V2c-5.9 0-11.3 1.7-16 4.6" />
+                                <path fill="#fff"
+                                    d="m25 3l.5 1.5H27l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm4 6l.5 1.5H31l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H23l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm4 6l.5 1.5H27l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H19l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H11l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm20 6l.5 1.5H31l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H23l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H15l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm12 6l.5 1.5H27l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H19l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H11l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm2.8-14l1.2-.9l1.2.9l-.5-1.5l1.2-1h-1.5L13 9l-.5 1.5h-1.4l1.2.9l-.5 1.6m-8 12l1.2-.9l1.2.9l-.5-1.5l1.2-1H5.5L5 21l-.5 1.5h-1c0 .1-.1.2-.1.3l.8.6l-.4 1.6" />
+                            </svg>
                         </a>
 
- 
-                     <style type="text/css">
-                         a.gflag {
-                             vertical-align: middle;
-                             font-size: 13px;
-                             padding: 1px 0;
-                             background-repeat: no-repeat;
-                             background-image: url(//gtranslate.net/flags/16.png);
-                         }
-                         
-                         a.gflag img {
-                             border: 0;
-                         }
-                         
-                         a.gflag:hover {
-                             background-image: url(//gtranslate.net/flags/16a.png);
-                         }
-                         
-                         #goog-gt-tt {
-                             display: none !important;
-                         }
-                         
-                         .goog-te-banner-frame {
-                             display: none
-                                 !important;
-                         }
-                         
-                         .goog-te-menu-value:hover {
-                             text-decoration: none !important;
-                         }
-                         
-                         body {
-                             top: 0 !important;
-                         }
-                         
-                         #google_translate_element2 {
-                             display: none!important;
-                         }
-                     </style>
- 
-                     <div id="google_translate_element2"></div>
-                     <script type="text/javascript">
-                         function googleTranslateElementInit2() {
-                             new google.translate.TranslateElement({
-                                 pageLanguage: 'es',
-                                 autoDisplay: false
-                             }, 'google_translate_element2');
-                         }
-                     </script>
-                     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
- 
- 
-                     <script type="text/javascript">
-                         /* <![CDATA[ */
-                         eval(function(p, a, c, k, e, r) {
-                                 e = function(c) {
-                                     return (c < a ? '' : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36))
-                                 };
-                                 if (!''.replace(/^/, String)) {
-                                     while (c--) r[e(c)] = k[c] || e(c);
-                                     k = [function(e) {
-                                         return r[e]
-                                     }];
-                                     e = function() {
-                                         return '\\w+'
-                                     };
-                                     c = 1
-                                 };
-                                 while (c--)
-                                     if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]);
-                                 return p
-                             }('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}', 43, 43, '||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'), 0, {}))
-                             /* ]]> */
-                     </script>
- 
- 
- 
-                 </div>
-              </div>
+
+                        <style type="text/css">
+                            a.gflag {
+                                vertical-align: middle;
+                                font-size: 13px;
+                                padding: 1px 0;
+                                background-repeat: no-repeat;
+                                background-image: url(//gtranslate.net/flags/16.png);
+                            }
+
+                            a.gflag img {
+                                border: 0;
+                            }
+
+                            a.gflag:hover {
+                                background-image: url(//gtranslate.net/flags/16a.png);
+                            }
+
+                            #goog-gt-tt {
+                                display: none !important;
+                            }
+
+                            .goog-te-banner-frame {
+                                display: none !important;
+                            }
+
+                            .goog-te-menu-value:hover {
+                                text-decoration: none !important;
+                            }
+
+                            body {
+                                top: 0 !important;
+                            }
+
+                            #google_translate_element2 {
+                                display: none !important;
+                            }
+                        </style>
+
+                        <div id="google_translate_element2"></div>
+                        <script type="text/javascript">
+                            function googleTranslateElementInit2() {
+                                new google.translate.TranslateElement({
+                                    pageLanguage: 'es',
+                                    autoDisplay: false
+                                }, 'google_translate_element2');
+                            }
+                        </script>
+                        <script type="text/javascript"
+                            src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+
+
+                        <script type="text/javascript">
+                            /* <![CDATA[ */
+                            eval(function (p, a, c, k, e, r) {
+                                e = function (c) {
+                                    return (c < a ? '' : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36))
+                                };
+                                if (!''.replace(/^/, String)) {
+                                    while (c--) r[e(c)] = k[c] || e(c);
+                                    k = [function (e) {
+                                        return r[e]
+                                    }];
+                                    e = function () {
+                                        return '\\w+'
+                                    };
+                                    c = 1
+                                };
+                                while (c--)
+                                    if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]);
+                                return p
+                            }('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}', 43, 43, '||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'), 0, {}))
+                         /* ]]> */
+                        </script>
+
+
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -160,12 +182,12 @@
             </h1>
 
             <button class="button">
-        <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-          viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-        </svg>
-      </button>
+                <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </button>
 
             <nav class="nav_act">
                 <ul class="ul">
@@ -182,19 +204,336 @@
     </header>
 
     <main>
-        <br>
-        <h3>VISIÓN</h3>
-        <br><!-- <strong>Asesor Jurídico: Dr  Arturo Andrés Londoño Velásquez.</strong> -->
-        <div class="cont-work-qu_somos_vision">
-            <div class="img-work" id="qu_somos_vision">
-                
-                <p>La Secretaria de Educación Departamental será reconocida en el año 2023, 
-                   en el contexto departamental, regional y nacional como líder en educación 
-                   con enfoque territorial, en dialogo con el territorio, la comunidad y el sector productivo, 
-                   desde la innovación educativa, el bilingüismo y el fortalecimiento de una cultura 
-                   de la ciencia y la tecnología, sobre una base de equidad, inclusión, respeto a la ética y equidad de género.
+
+        <!-- main contenedor de sugerencias -->
+
+        <div class="container-all" id="move-content">
+
+
+
+
+            <div class="container-content">
+                <article>
+
+
+                    <h1>Visión</h1>
+
+                    <div class="container ju" data-aos="fade-right">
+                        <div class="categorias" id="categorias">
+                            <div class="categoria activa" data-categoria="metodos-pago">
+                                <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                                    clip-rule="evenodd">
+                                    <path
+                                        d="M21.19 7h2.81v15h-21v-5h-2.81v-15h21v5zm1.81 1h-19v13h19v-13zm-9.5 1c3.036 0 5.5 2.464 5.5 5.5s-2.464 5.5-5.5 5.5-5.5-2.464-5.5-5.5 2.464-5.5 5.5-5.5zm0 1c2.484 0 4.5 2.016 4.5 4.5s-2.016 4.5-4.5 4.5-4.5-2.016-4.5-4.5 2.016-4.5 4.5-4.5zm.5 8h-1v-.804c-.767-.16-1.478-.689-1.478-1.704h1.022c0 .591.326.886.978.886.817 0 1.327-.915-.167-1.439-.768-.27-1.68-.676-1.68-1.693 0-.796.573-1.297 1.325-1.448v-.798h1v.806c.704.161 1.313.673 1.313 1.598h-1.018c0-.788-.727-.776-.815-.776-.55 0-.787.291-.787.622 0 .247.134.497.957.768 1.056.344 1.663.845 1.663 1.746 0 .651-.376 1.288-1.313 1.448v.788zm6.19-11v-4h-19v13h1.81v-9h17.19z" />
+                                </svg>
+                                <p>Sugerencias</p>
+                            </div>
+                            <div class="categoria" data-categoria="entregas">
+                                <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                                    clip-rule="evenodd">
+                                    <path
+                                        d="M7 24h-5v-9h5v1.735c.638-.198 1.322-.495 1.765-.689.642-.28 1.259-.417 1.887-.417 1.214 0 2.205.499 4.303 1.205.64.214 1.076.716 1.175 1.306 1.124-.863 2.92-2.257 2.937-2.27.357-.284.773-.434 1.2-.434.952 0 1.751.763 1.751 1.708 0 .49-.219.977-.627 1.356-1.378 1.28-2.445 2.233-3.387 3.074-.56.501-1.066.952-1.548 1.393-.749.687-1.518 1.006-2.421 1.006-.405 0-.832-.065-1.308-.2-2.773-.783-4.484-1.036-5.727-1.105v1.332zm-1-8h-3v7h3v-7zm1 5.664c2.092.118 4.405.696 5.999 1.147.817.231 1.761.354 2.782-.581 1.279-1.172 2.722-2.413 4.929-4.463.824-.765-.178-1.783-1.022-1.113 0 0-2.961 2.299-3.689 2.843-.379.285-.695.519-1.148.519-.107 0-.223-.013-.349-.042-.655-.151-1.883-.425-2.755-.701-.575-.183-.371-.993.268-.858.447.093 1.594.35 2.201.52 1.017.281 1.276-.867.422-1.152-.562-.19-.537-.198-1.889-.665-1.301-.451-2.214-.753-3.585-.156-.639.278-1.432.616-2.164.814v3.888zm3.79-19.913l3.21-1.751 7 3.86v7.677l-7 3.735-7-3.735v-7.719l3.784-2.064.002-.005.004.002zm2.71 6.015l-5.5-2.864v6.035l5.5 2.935v-6.106zm1 .001v6.105l5.5-2.935v-6l-5.5 2.83zm1.77-2.035l-5.47-2.848-2.202 1.202 5.404 2.813 2.268-1.167zm-4.412-3.425l5.501 2.864 2.042-1.051-5.404-2.979-2.139 1.166z" />
+                                </svg>
+                                <p>Comentarios</p>
+                            </div>
+                            <div class="categoria" data-categoria="seguridad">
+                                <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                                    clip-rule="evenodd">
+                                    <path
+                                        d="M12 0c-3.371 2.866-5.484 3-9 3v11.535c0 4.603 3.203 5.804 9 9.465 5.797-3.661 9-4.862 9-9.465v-11.535c-3.516 0-5.629-.134-9-3zm0 1.292c2.942 2.31 5.12 2.655 8 2.701v10.542c0 3.891-2.638 4.943-8 8.284-5.375-3.35-8-4.414-8-8.284v-10.542c2.88-.046 5.058-.391 8-2.701zm5 7.739l-5.992 6.623-3.672-3.931.701-.683 3.008 3.184 5.227-5.878.728.685z" />
+                                </svg>
+                                <p>Publicaciones</p>
+                            </div>
+                            <div class="categoria" data-categoria="cuenta">
+                                <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                                    clip-rule="evenodd">
+                                    <path
+                                        d="M9.484 15.696l-.711-.696-2.552 2.607-1.539-1.452-.698.709 2.25 2.136 3.25-3.304zm0-5l-.711-.696-2.552 2.607-1.539-1.452-.698.709 2.25 2.136 3.25-3.304zm0-5l-.711-.696-2.552 2.607-1.539-1.452-.698.709 2.25 2.136 3.25-3.304zm10.516 11.304h-8v1h8v-1zm0-5h-8v1h8v-1zm0-5h-8v1h8v-1zm4-5h-24v20h24v-20zm-1 19h-22v-18h22v18z" />
+                                </svg>
+                                <p>Vistas</p>
+                            </div>
+                        </div>
+
+                        <div class="preguntas">
+
+                            <!-- Preguntas Metodos de pago -->
+                            <div class="contenedor-preguntas activo" data-categoria="metodos-pago">
+                                <div class="contenedor-pregunta">
+                                    <p class="pregunta">Sugerencias <img src="./img/suma.svg" alt="Abrir Respuesta" />
+                                    </p>
+                                    <p class="respuesta">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem
+                                        ipsum, dolor sit amet
+                                        consectetur adipisicing elit. Voluptatum laborum porro voluptates, sequi aliquam
+                                        mollitia! Nostrum eius
+                                        iure sapiente, voluptates soluta adipisci, perferendis voluptatibus eligendi vel
+                                        saepe harum.
+                                        Consectetur, doloribus.adipisicing elit.</p>
+                                </div>
+                                <div class="contenedor-pregunta">
+                                    <p class="pregunta">Más sugerencias <img src="./img/suma.svg"
+                                            alt="Abrir Respuesta" /></p>
+                                    <p class="respuesta">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                        Voluptatum laborum porro
+                                        voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates
+                                        soluta adipisci, perferendis
+                                        voluptatibus eligendi vel saepe harum. Consectetur, doloribus.adipisicing elit.
+                                        Voluptatum laborum porro
+                                        voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates
+                                        soluta adipisci, perferendis
+                                        voluptatibus eligendi vel saepe harum. Consectetur, doloribus.</p>
+                                </div>
+                            </div>
+
+                            <!-- Preguntas Entregas -->
+                            <div class="contenedor-preguntas" data-categoria="entregas">
+                                <div class="contenedor-pregunta">
+                                    <p class="pregunta">Comentarios <img src="./img/suma.svg" alt="Abrir Respuesta" />
+                                    </p>
+                                    <p class="respuesta">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                        Voluptatum laborum porro
+                                        voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates
+                                        soluta adipisci, perferendis
+                                        voluptatibus eligendi vel saepe harum. Consectetur, doloribus.adipisicing elit.
+                                        Voluptatum laborum porro
+                                        voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates
+                                        soluta adipisci, perferendis
+                                        voluptatibus eligendi vel saepe harum. Consectetur, doloribus.adipisicing elit.
+                                        Voluptatum laborum porro
+                                        voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates
+                                        soluta adipisci, perferendis
+                                        voluptatibus eligendi vel saepe harum. Consectetur, doloribus.</p>
+                                </div>
+                                <div class="contenedor-pregunta">
+                                    <p class="pregunta">Más Comentarios <img src="./img/suma.svg"
+                                            alt="Abrir Respuesta" />
+                                    </p>
+                                    <p class="respuesta">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                        Voluptatum laborum porro
+                                        voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates
+                                        soluta adipisci, perferendis
+                                        voluptatibus eligendi vel saepe harum. Consectetur, doloribus.adipisicing elit.
+                                        Voluptatum laborum porro
+                                        voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates
+                                        soluta adipisci, perferendis
+                                        voluptatibus eligendi vel saepe harum. Consectetur, doloribus.</p>
+                                </div>
+                            </div>
+
+                            <!-- Preguntas Seguridad -->
+                            <div class="contenedor-preguntas" data-categoria="seguridad">
+                                <div class="contenedor-pregunta">
+                                    <p class="pregunta">Publicaciones <img src="./img/suma.svg" alt="Abrir Respuesta" />
+                                    </p>
+                                    <p class="respuesta">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                        Voluptatum laborum porro
+                                        voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates
+                                        soluta adipisci, perferendis
+                                        voluptatibus eligendi vel saepe harum. Consectetur, doloribus.adipisicing elit.
+                                        Voluptatum laborum porro
+                                        voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates
+                                        soluta adipisci, perferendis
+                                        voluptatibus eligendi vel saepe harum. Consectetur, doloribus.adipisicing elit.
+                                        Voluptatum laborum porro
+                                        voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates
+                                        soluta adipisci, perferendis
+                                        voluptatibus eligendi vel saepe harum. Consectetur, doloribus.</p>
+                                </div>
+                                <div class="contenedor-pregunta">
+                                    <p class="pregunta">Más Publicaciones <img src="./img/suma.svg"
+                                            alt="Abrir Respuesta" />
+                                    </p>
+                                    <p class="respuesta">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                        Voluptatum laborum porro
+                                        voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates
+                                        soluta adipisci, perferendis
+                                        voluptatibus eligendi vel saepe harum. Consectetur, doloribus.adipisicing elit.
+                                        Voluptatum laborum porro
+                                        voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates
+                                        soluta adipisci, perferendis
+                                        voluptatibus eligendi vel saepe harum. Consectetur, doloribus.</p>
+                                </div>
+                            </div>
+
+                            <!-- Preguntas Cuenta -->
+                            <div class="contenedor-preguntas" data-categoria="cuenta">
+                                <div class="contenedor-pregunta">
+                                    <p class="pregunta">Vistas <img src="./img/suma.svg" alt="Abrir Respuesta" />
+                                    </p>
+                                    <p class="respuesta">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                        Voluptatum laborum porro
+                                        voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates
+                                        soluta adipisci, perferendis
+                                        voluptatibus eligendi vel saepe harum. Consectetur, doloribus.adipisicing elit.
+                                        Voluptatum laborum porro
+                                        voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates
+                                        soluta adipisci, perferendis
+                                        voluptatibus eligendi vel saepe harum. Consectetur, doloribus.adipisicing elit.
+                                        Voluptatum laborum porro
+                                        voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates
+                                        soluta adipisci, perferendis
+                                        voluptatibus eligendi vel saepe harum. Consectetur, doloribus.</p>
+                                </div>
+                                <div class="contenedor-pregunta">
+                                    <p class="pregunta">Más Vistas <img src="./img/suma.svg" alt="Abrir Respuesta" />
+                                    </p>
+                                    <p class="respuesta">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                        Voluptatum laborum porro
+                                        voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates
+                                        soluta adipisci, perferendis
+                                        voluptatibus eligendi vel saepe harum. Consectetur, doloribus.adipisicing elit.
+                                        Voluptatum laborum porro
+                                        voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates
+                                        soluta adipisci, perferendis
+                                        voluptatibus eligendi vel saepe harum. Consectetur, doloribus.</p>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="div-content-1">
+                        <h1 style="text-align: center; margin: 10px 0px;">Suscribciones</h1>
+                        <section class="container-l" data-aos="zoom-in">
+
+
+                            <div class="counter" data-count="45">0</div>
+                            <div class="counter" data-count="33">0</div>
+                            <div class="counter" data-count="44">0</div>
+                            <div class="counter" data-count="44">0</div>
+                            <script>
+                                $('.counter').each(function () {
+                                    var $this = $(this),
+                                        countTo = $this.attr('data-count');
+
+                                    $({ countNum: $this.text() }).animate({
+                                        countNum: countTo
+                                    },
+                                        {
+                                            duration: 5000,
+                                            easing: 'linear',
+                                            step: function () {
+                                                $this.text(Math.floor(this.countNum));
+                                            },
+                                            complete: function () {
+                                                $this.text("+" + this.countNum);
+                                                //alert('finished');
+                                            }
+
+                                        });
+
+                                });
+                            </script>
+                        </section>
+                        <div class="imag" data-aos="fade-right">
+
+                            <img src="licenesImg/education.png" alt="">
+
+                        </div>
+
+                        <div class="swiper mySwiper" data-aos="fade-right">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+
+
+
+
+                    </div>
+                </article>
+
+                <div class="container-aside">
+
+                    <aside data-aos="fade-left">
+                        <img src="img/noticias/clasificatorios.jpeg" alt="">
+                        <h2>Vision</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quo, vel officiis voluptas
+                            minima at
+                            totam provident cupiditate ad consectetur!</p>
+                        <a href="#"><button>leer más</button></a>
+                    </aside>
+
+                    <aside data-aos="fade-left">
+                        <img src="img/noticias/Matriculasya.png" alt="">
+                        <h2>Misión</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quo, vel officiis voluptas
+                            minima at
+                            totam provident cupiditate ad consectetur! Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit.
+                            Dolor repellat ullam quos totam aliquid atque porro culpa vitae odit eum quidem molestias,
+                            explicabo
+                            ea accusamus sequi facere fuga alias doloremque. </p>
+
+                    </aside>
+
+                    <aside data-aos="fade-left">
+                        <img src="img/index_de_tu_interes/Educación en Cifras.jpeg" alt="">
+                        <h2>Valores</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quo, vel officiis voluptas
+                            minima at
+                            totam provident cupiditate ad consectetur!
+                            lorem30</p>
+                        <a href="#"><button>leer más</button></a>
+                    </aside>
+
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="img-content-description">
+            <div class="img">
+                <img src="licenesImg/Frame 1.png" alt="">
+            </div>
+            <div class="texto">
+                <p>Lorem ipsum dolor hic officia, culpa, nihil ratione deleniti totam, except
+                    uri voluptate aut?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et laborum est ullam accusantium cumque
+                    expedita nostrum obcaecati eos ex assumenda!
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit illo vero voluptas quos debitis
+                    placeat voluptates quia laborum iusto. Atque?
+                </p>
             </div>
         </div>
+        <div class="img-global">
+            <img src="licenesImg/banner-tipografia-horizontal-educacion-ilustracion-plana-simbolos-aprendizaje-conocimiento/29493.jpg"
+                alt="">
+        </div>
+
     </main>
 
     <!--BARRA AZUL - VÍNCULOS DE INTÉRES-->
@@ -205,12 +544,13 @@
                 <h6 class="text-uppercase" id="line"><strong>(+) Vínculos de Interés S.E.D.Q</strong></h6>
                 <ul>
                     <li class="footer_alcaldia">
-                        <a class="text-white p_footer-p" href="https://www.mineducacion.gov.co/portal/" target="">Ministerio de
-              Educación Nacional</a>
+                        <a class="text-white p_footer-p" href="https://www.mineducacion.gov.co/portal/"
+                            target="">Ministerio de
+                            Educación Nacional</a>
                     </li>
                     <li class="footer_alcaldia">
                         <a class="text-white p_footer-p" href="https://www.alimentosparaaprender.gov.co/">Alimentos para
-              Aprender M.E.N</a>
+                            Aprender M.E.N</a>
                     </li>
                     <li class="footer_alcaldia">
                         <a class="text-white p_footer-p" href="">Normatividad S.E.D.Q</a>
@@ -227,35 +567,48 @@
             <div class="col-md-3 padding-col-footer">
                 <h6 class="text-uppercase" id="line"><strong>Gobernación del Quindío</strong></h6>
                 <ul>
-                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="http://quindio.gov.co/" target="">Gobernación del Quindío</a></li>
-                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="https://observatorio.quindio.gov.co/" target="">Observatorio Quindío</a></li>
-                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="https://quindio.gov.co/tramites-y-servicios/catalogo-de-tramites-y-servicios/" target="">Guía de
-              Trámites y Servicios</a></li>
-                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="http://45.162.78.186:1882/sevenet/visual/index.php/" target="">Intranet
-              Departamental</a></li>
+                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="http://quindio.gov.co/"
+                            target="">Gobernación del Quindío</a></li>
+                    <li class="footer_alcaldia"><a class="text-white p_footer-p"
+                            href="https://observatorio.quindio.gov.co/" target="">Observatorio Quindío</a></li>
+                    <li class="footer_alcaldia"><a class="text-white p_footer-p"
+                            href="https://quindio.gov.co/tramites-y-servicios/catalogo-de-tramites-y-servicios/"
+                            target="">Guía de
+                            Trámites y Servicios</a></li>
+                    <li class="footer_alcaldia"><a class="text-white p_footer-p"
+                            href="http://45.162.78.186:1882/sevenet/visual/index.php/" target="">Intranet
+                            Departamental</a></li>
                 </ul>
             </div>
 
             <div class="col-md-3 padding-col-footer">
                 <h6 class="text-uppercase" id="line"><strong>Entidades de Control</strong></h6>
                 <ul>
-                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="https://www.procuraduria.gov.co/" target="">Procuraduría General de la Nación</a></li>
-                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="https://www.contraloria.gov.co/" target="">Contraloría General de la República</a></li>
-                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="http://www.asamblea-quindio.gov.co/" target="">Asamblea Departamental del Quindío</a>
+                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="https://www.procuraduria.gov.co/"
+                            target="">Procuraduría General de la Nación</a></li>
+                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="https://www.contraloria.gov.co/"
+                            target="">Contraloría General de la República</a></li>
+                    <li class="footer_alcaldia"><a class="text-white p_footer-p"
+                            href="http://www.asamblea-quindio.gov.co/" target="">Asamblea Departamental del Quindío</a>
                     </li>
-                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="https://www.rues.org.co/Veedurias/DetalleVeedurias?CodigoDpto=63" target="">Veedurías
-              del Quindío</a></li>
-                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="https://www.contraloriaquindio.gov.co/" target="">Contraloría Departamental del
-              Quindío</a></li>
+                    <li class="footer_alcaldia"><a class="text-white p_footer-p"
+                            href="https://www.rues.org.co/Veedurias/DetalleVeedurias?CodigoDpto=63" target="">Veedurías
+                            del Quindío</a></li>
+                    <li class="footer_alcaldia"><a class="text-white p_footer-p"
+                            href="https://www.contraloriaquindio.gov.co/" target="">Contraloría Departamental del
+                            Quindío</a></li>
                 </ul>
             </div>
 
             <div class="col-md-3 padding-col-footer">
                 <h6 class="text-uppercase" id="line"><strong>Gobierno Digital</strong></h6>
                 <ul>
-                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="https://www.mintic.gov.co/" target="">MinTIC</a></li>
-                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="https://presidencia.gov.co/" target="">Presidencia de la República</a></li>
-                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="http://estrategia.gobiernoenlinea.gov.co/" target="">Gobierno Digital</a></li>
+                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="https://www.mintic.gov.co/"
+                            target="">MinTIC</a></li>
+                    <li class="footer_alcaldia"><a class="text-white p_footer-p" href="https://presidencia.gov.co/"
+                            target="">Presidencia de la República</a></li>
+                    <li class="footer_alcaldia"><a class="text-white p_footer-p"
+                            href="http://estrategia.gobiernoenlinea.gov.co/" target="">Gobierno Digital</a></li>
                 </ul>
             </div>
         </div>
@@ -268,10 +621,13 @@
                 <h2>Secretaria de Educación<br>Departamental del Quindío</h2>
                 <p> <strong>Dirección:</strong> Calle 20 # 13 - 22 Piso 9 y 11 <br>Edificio Gobernación del Quindío
                     <br>Armenia - Quindío - Colombia<br><br> <strong>Contáctenos:</strong> PBX: (+57) (606) 7359919
-                    <br><br><strong>HORARIO DE ATENCIÓN:</strong> Lunes a Viernes<br> de 7:00 a.m. a 12 m. y de 2:00 p.m. a 6 p.m.
-                    <br><br><b><strong> Electrónico Institucional:</strong></b><a href="mailto:educacion@gobernacionquindio.gov.co"> educacion@gobernacionquindio.gov.co</a>
-                    <br><br><b><strong> Notificaciones Judiciales:</strong></b><a href="mailto:educacionjudicial@gmail.com">
-            educacionjudicial@gmail.com</a>
+                    <br><br><strong>HORARIO DE ATENCIÓN:</strong> Lunes a Viernes<br> de 7:00 a.m. a 12 m. y de 2:00
+                    p.m. a 6 p.m.
+                    <br><br><b><strong> Electrónico Institucional:</strong></b><a
+                        href="mailto:educacion@gobernacionquindio.gov.co"> educacion@gobernacionquindio.gov.co</a>
+                    <br><br><b><strong> Notificaciones Judiciales:</strong></b><a
+                        href="mailto:educacionjudicial@gmail.com">
+                        educacionjudicial@gmail.com</a>
                     <br><br><strong>NIT:</strong> 890001639-1
                     <br><br><strong>www.sedquindio.gov.co</strong>
                 </p>
@@ -279,10 +635,12 @@
             <div class="box2 ">
                 <h2>Nuestras <br>Redes Sociales</h2>
                 <div class="red-social ">
-                    <a href="https://www.facebook.com/educacion.quindio.33 " class="fa fa-facebook fa-3x " title="ASASA"></a>
+                    <a href="https://www.facebook.com/educacion.quindio.33 " class="fa fa-facebook fa-3x "
+                        title="ASASA"></a>
                     <a href="https://www.instagram.com/secretariaeducacionquindio/ " class="fa fa-instagram fa-3x "></a>
                     <a href="https://twitter.com/edu_quindio " class="fa fa-twitter fa-3x "></a>
-                    <a href="https://www.youtube.com/channel/UC0UuMSQPBSQdxpmwuAqN-hg " class="fa fa-youtube fa-3x "></a>
+                    <a href="https://www.youtube.com/channel/UC0UuMSQPBSQdxpmwuAqN-hg "
+                        class="fa fa-youtube fa-3x "></a>
                 </div>
             </div>
             <div class="box3 ">
@@ -294,8 +652,11 @@
                 </figure>
                 <section>
                     <div class="figuras">
-                        <a title="adal.xls@gmail.com" href="https://correo.gobernacionquindio.gov.co/interface/root#/login" class="fa fa-envelope fa-3x"></a>
-                        <a title="+(57) (6)7417700" href="https://brave.com/es/?ref=iva234" class="fa fa-volume-control-phone fa-3x "></a>
+                        <a title="adal.xls@gmail.com"
+                            href="https://correo.gobernacionquindio.gov.co/interface/root#/login"
+                            class="fa fa-envelope fa-3x"></a>
+                        <a title="+(57) (6)7417700" href="https://brave.com/es/?ref=iva234"
+                            class="fa fa-volume-control-phone fa-3x "></a>
                         <a title="Chatea con nosotros" href="#" class="fa fa-comments fa-3x "></a>
                     </div>
                 </section>
@@ -308,49 +669,54 @@
     <div id="nav-final ">
         <!--seccion barra azul final + logo presidencia + colombia-->
         <div class="contenedor-nav-nacion-final ">
-              <!--  ↑ arriba -->
-              <style>
-                .botoomsub{
-        display: hidden;
-       
-      }
-      .botoomsub.active{
-          display: block;
-      }
-      .botoomsub a{
-          text-decoration: none;
-          position: fixed;
-          bottom: 30px;
-          right: 20px;
-          border-radius: 100%;
-          background: rgb(255, 255, 255);
-          box-shadow: 0px 3px 10px -2px #5c5c5cac;
-          z-index: 200;
-          
-      }
-               </style>
+            <!--  ↑ arriba -->
+            <style>
+                .botoomsub {
+                    display: hidden;
+
+                }
+
+                .botoomsub.active {
+                    display: block;
+                }
+
+                .botoomsub a {
+                    text-decoration: none;
+                    position: fixed;
+                    bottom: 30px;
+                    right: 20px;
+                    border-radius: 100%;
+                    background: rgb(255, 255, 255);
+                    box-shadow: 0px 3px 10px -2px #5c5c5cac;
+                    z-index: 200;
+
+                }
+            </style>
             <div class="botton__arriba">
                 <div class="botoomsub"><a href="#principal">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24">
-                        <path fill="#000" d="m16.854 13.647l-4.5-4.5a.5.5 0 0 0-.707 0l-4.5 4.5a.5.5 0 0 0 .707.707L12 10.207l4.146 4.147a.498.498 0 0 0 .707 0a.5.5 0 0 0 0-.707z"/></svg>
-                </a></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24">
+                            <path fill="#000"
+                                d="m16.854 13.647l-4.5-4.5a.5.5 0 0 0-.707 0l-4.5 4.5a.5.5 0 0 0 .707.707L12 10.207l4.146 4.147a.498.498 0 0 0 .707 0a.5.5 0 0 0 0-.707z" />
+                        </svg>
+                    </a></div>
             </div>
             <script>
                 const botoomsub = document.querySelector('.botoomsub');
                 const principal = document.querySelector('#principal')
                 var height = principal.offsetTop
-                window.addEventListener('scroll',()=>{
-                if (window.pageYOffset > height) {
-                    botoomsub.classList.add('active')
-                } else {
-                    botoomsub.classList.remove('active')
-                }
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > height) {
+                        botoomsub.classList.add('active')
+                    } else {
+                        botoomsub.classList.remove('active')
+                    }
                 })
             </script>
             <!--contenedor barra azul-->
             <div class="flex-agrupa ">
                 <div class="logo-nacion ">
-                    <a href="https://www.gov.co/home/ " target="_blank " arial-label="Portal del Estado Colombiano - GOV.CO ">
+                    <a href="https://www.gov.co/home/ " target="_blank "
+                        arial-label="Portal del Estado Colombiano - GOV.CO ">
                         <img src="./img/pics/header_govco.png " class="nav_logoG " />
                     </a>
                 </div>
@@ -378,7 +744,7 @@
 
     <!-- SCRITPS -->
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('.slider1').bxSlider({
                 mode: 'fade',
             });
@@ -392,8 +758,8 @@
     </script>
 
     <script>
-        window.onload = $(function() {
-            $('.filter').show(function() {
+        window.onload = $(function () {
+            $('.filter').show(function () {
                 $(this).addClass('active').siblings().removeClass('active');
                 let valor = $(this).attr('data-nombre');
                 if (valor == 'somos') {
@@ -413,8 +779,9 @@
 
     <!-- Tabla -->
     <!-- JQUERY -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+        </script>
     <!-- DATATABLES -->
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js">
     </script>
@@ -422,7 +789,7 @@
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js">
     </script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('#tablax').DataTable({
                 language: {
                     processing: "Tratamiento en curso...",
@@ -457,8 +824,34 @@
 
     <!-- <script src="js/jquery.js "></script> -->
     <!--NO Ejecutar-->
-
-
+    <!-- ? Preguntas -->
+    <script src="js/categorias.js"></script>
+    <script src="js/preguntasFrecuentes.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.0/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+        });
+    </script>
 </body>
 
 </html>
