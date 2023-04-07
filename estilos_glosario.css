@@ -341,7 +341,7 @@ article img {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 0 10px;
+    margin: 10px 10px;
   }
   .categorias {
     grid-template-columns: 1fr;
