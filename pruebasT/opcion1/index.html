@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Bookmark landing page</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="hero">
+
+    <nav class="nav container">
+
+      <figure class="nav__figure">
+        <img src="./images/logo-bookmark.svg" class="nav__logo">
+      </figure>
+
+      <div class="nav__hamburguer">
+        <img src="./images/icon-hamburger.svg" class="nav__button">
+      </div>
+
+      <div class="nav__container">
+
+        <ul class="nav__list container">
+
+          <li class="nav__element">
+            <a href="#" class="nav__link">Features</a>
+          </li>
+
+          <li class="nav__element">
+            <a href="#" class="nav__link">Pricing</a>
+          </li>
+
+          <li class="nav__element">
+            <a href="#" class="nav__link">Contact</a>
+          </li>
+
+          <li class="nav__element">
+            <a href="#" class="nav__link nav__link--last">Login</a>
+          </li>
+
+        </ul>
+
+        <div class="nav__social">
+
+          <a href="#" class="nav__media">
+            <img src="./images/icon-facebook.svg" class="nav__socialme">
+          </a>
+  
+          <a href="#" class="nav__media">
+            <img src="./images/icon-twitter.svg" class="nav__socialme">
+          </a>
+  
+        </div>
+
+      </div>
+
+      
+    </nav>
+
+    <section class="hero__main container">
+
+      <figure class="hero__figure">
+        <img src="./images/illustration-hero.svg" class="hero__img">
+      </figure>
+
+      <article class="hero__texts">
+        <h1 class="hero__title"> A Simple Bookmark Manager</h1>
+        <p class="hero__paragraph"> A clean and simple interface to organize your favourite websites. Open a new 
+          browser tab and see your sites load instantly. Try it for free.</p>
+
+        <div class="hero__buttons">
+          <a href="#" class="hero__button"> Get it on Chrome</a>
+
+          <a href="#" class="hero__button hero__button--white"> Get it on Firefox</a>
+        </div>
+      </article>
+
+    </section>
+
+  </header>
+
+  <main class="main">
+
+    <section class="features container">
+
+      <div class="features__content">
+
+        <h2 class="features__title">Features</h2>
+        <p class="features__paragraph">Our aim is to make it quick and easy for you to access your favourite websites. 
+          Your bookmarks sync between your devices so you can access them on the go.</p>
+
+        <ul class="features__list">
+
+          <li class="features__element">
+            <a href="#" class="features__tab features__tab--active" data-article="1">Simple Bookmarking</a>
+          </li>
+
+          <li class="features__element">
+            <a href="#" class="features__tab" data-article="2">Speedy Searching
+            </a>
+          </li>
+
+          <li class="features__element">
+            <a href="#" class="features__tab" data-article="3">Easy Sharing
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="features__container">
+
+        <article class="features__article features__article--active">
+
+          <figure class="features__figure">
+
+            <img src="./images/illustration-features-tab-1.svg" class="features__img">
+
+          </figure>
+
+          <div class="features__texts">
+
+            <h3 class="features__subtitle"> Bookmark in one click</h3>
+            <p class="features__copy"> Organize your bookmarks however you like. Our simple drag-and-drop interface 
+              gives you complete control over how you manage your favourite sites.</p>
+            <a href="#" class="features__cta">More Info</a>
+
+          </div>
+
+        </article>
+
+        <article class="features__article">
+
+          <figure class="features__figure">
+
+            <img src="./images/illustration-features-tab-2.svg" class="features__img">
+
+          </figure>
+
+          <div class="features__texts">
+
+            <h3 class="features__subtitle"> Intelligent search</h3>
+            <p class="features__copy"> Our powerful search feature will help you find saved sites in no time at all. 
+              No need to trawl through all of your bookmarks.</p>
+            <a href="#" class="features__cta">More Info</a>
+
+          </div>
+
+        </article>
+
+
+        <article class="features__article">
+
+          <figure class="features__figure">
+
+            <img src="./images/illustration-features-tab-3.svg" class="features__img">
+
+          </figure>
+
+          <div class="features__texts">
+
+            <h3 class="features__subtitle">Share your bookmarks
+            </h3>
+            <p class="features__copy">Easily share your bookmarks and collections with others. Create a shareable 
+              link that you can send at the click of a button.</p>
+            <a href="#" class="features__cta">More Info</a>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+    <section class="download container">
+
+      <h2 class="download__title"> Download the extension</h2>
+      <p class="download__paragraph"> We’ve got more browsers in the pipeline. Please do let us know if you’ve 
+        got a favourite you’d like us to prioritize.
+      </p>
+
+      <div class="download__container">
+
+        <article class="download__item">
+
+          <figure class="download__figure">
+            <img src="./images/logo-chrome.svg" class="download__img">
+          </figure>
+
+          <h3 class="download__browser"> Add to Chrome</h3>
+          <p class="download__version"> Minimum version 62</p>
+          <a href="#" class="download__extension">Add & Install Extension</a>
+
+        </article>
+
+        <article class="download__item">
+
+          <figure class="download__figure">
+            <img src="./images/logo-firefox.svg" class="download__img">
+          </figure>
+
+          <h3 class="download__browser"> Add to Firefox</h3>
+          <p class="download__version"> Minimum version 55</p>
+          <a href="#" class="download__extension">Add & Install Extension</a>
+
+        </article>
+
+        <article class="download__item">
+
+          <figure class="download__figure">
+            <img src="./images/logo-opera.svg" class="download__img">
+          </figure>
+
+          <h3 class="download__browser"> Add to Opera</h3>
+          <p class="download__version"> Minimum version 46</p>
+          <a href="#" class="download__extension">Add & Install Extension</a>
+
+        </article>
+
+
+      </div>
+
+    </section>
+  </main>
+
+  <div class="slider">
+		<aside class="nav">
+			<div class="enlaces" id="enlaces">
+				<a href="#primera-seccion">Primera Sección</a>
+				<a href="#segunda-seccion">Segunda Sección</a>
+				<a href="#tercera-seccion">Tercera Sección</a>
+			</div>
+		</aside>
+		<div class="secciones">
+			<div class="seccion">
+				<h2 class="encabezado" id="primera-seccion">Primera Sección</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et tellus sagittis, ultricies dui non, vestibulum nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer vehicula rutrum euismod. Mauris <br />
+					
+					Suspendisse potenti. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam ante est, pellentesque eget tincidunt sed, commodo ut enim. Praesent sodales arcu id diam pharetra, quis accumsan augue rutrum. Vestibulum tincidunt maximus ante viverra consequat. <br />
+					</p>
+				
+			</div>
+			<div class="seccion">
+				<h2 class="encabezado" id="segunda-seccion">Segunda Sección</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et tellus sagittis, ultricies dui non, vestibulum nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer vehicula rutrum euismod. Mauris dapibus scelerisque tristique. Etiam tempor lobortis dapibus. Morbi sagittis id magna non luctus. Vestibulum nec dui laoreet, mollis arcu sit amet, semper sapien. Curabitur porta egestas ipsum, sit amet pellentesque enim congue vitae. Mauris sodales mattis efficitur. Duis molestie arcu leo. Donec hendrerit turpis a sapien elementum ornare. Curabitur dictum ultrices erat eu dapibus. <br />
+        </p>
+			</div>
+			<div class="seccion">
+				<h2 class="encabezado" id="tercera-seccion">Tercera Sección</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et tellus sagittis, ultricies dui non, vestibulum nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer vehicula rutrum euismod. Mauris dapibus scelerisque tristique. Etiam tempor lobortis dapibus. Morbi sagittis id magna non luctus. Vestibulum nec dui laoreet, mollis arcu sit amet, semper sapien. Curabitur porta egestas ipsum, sit amet pellentesque enim congue vitae. Mauris sodales mattis efficitur. Duis molestie arcu leo. Donec hendrerit turpis a sapien elementum ornare. Curabitur dictum ultrices erat eu dapibus. <br />
+					
+					</p>
+			</div>
+		</div>
+	</div>
+
+
+  <div class="contenedor">
+		<header>
+			<div class="logo">
+				<h1>Carlos Arturo</h1>
+				<p>Desarrollador Web</p>
+			</div>
+			<form action="">
+				<input type="text" class="barra-busqueda" id="barra-busqueda" placeholder="Buscar">
+			</form>
+			<div class="categorias" id="categorias">
+				<a href="#" class="activo">Todos</a>
+				<a href="#">Naturaleza</a>
+				<a href="#">Ciudades</a>
+				<a href="#">Personas</a>
+				<a href="#">Animales</a>
+			</div>
+
+		<section class="grid" id="grid">
+			<div class="item" 
+				 data-categoria="ciudades"
+				 data-etiquetas="ciudades autos carros calles"
+				 data-descripcion="1.- Lorem ipsum dolor sit amet consectetur."
+			>
+				<div class="item-contenido">
+					<img src="images/ciudad1.png" alt="">
+				</div>
+			</div>
+
+			<div class="item"
+				 data-categoria="personas"
+				 data-etiquetas="personas mujeres"
+				 data-descripcion="2.- Lorem ipsum dolor sit amet consectetur."
+			>
+				<div class="item-contenido">
+					<img src="images/persona1.png" alt="">
+				</div>
+			</div>
+
+			<div class="item"
+				 data-categoria="paisajes"
+				 data-etiquetas="paisajes montañas mar playas"
+				 data-descripcion="3.- Lorem ipsum dolor sit amet consectetur."
+			>
+				<div class="item-contenido">
+					<img src="images/paisaje1.png" alt="">
+				</div>
+			</div>
+
+			<div class="item"
+				 data-categoria="animales"
+				 data-etiquetas="animales leones"
+				 data-descripcion="4.- Lorem ipsum dolor sit amet consectetur."
+			>
+				<div class="item-contenido">
+					<img src="images/animal1.png" alt="">
+				</div>
+			</div>
+
+			<div class="item"
+				 data-categoria="animales"
+				 data-etiquetas="animales pandas"
+				 data-descripcion="5.- Lorem ipsum dolor sit amet consectetur."
+			>
+				<div class="item-contenido">
+					<img src="images/animal2.png" alt="">
+				</div>
+			</div>
+
+			<div class="item"
+				 data-categoria="personas"
+				 data-etiquetas="personas mujeres"
+				 data-descripcion="6.- Lorem ipsum dolor sit amet consectetur."
+			>
+				<div class="item-contenido">
+					<img src="images/persona2.png" alt="">
+				</div>
+			</div>
+
+			<div class="item"
+				 data-categoria="paisajes"
+				 data-etiquetas="paisajes montañas niebla"
+				 data-descripcion="7.- Lorem ipsum dolor sit amet consectetur."
+			>
+				<div class="item-contenido">
+					<img src="images/paisaje2.png" alt="">
+				</div>
+			</div>
+
+			<div class="item" 
+				 data-categoria="ciudades"
+				 data-etiquetas="ciudades paisajes carreteras"
+				 data-descripcion="8.- Lorem ipsum dolor sit amet consectetur."
+			>
+				<div class="item-contenido">
+					<img src="images/ciudad2.png" alt="">
+				</div>
+			</div>
+
+			<div class="item"
+				 data-categoria="naturaleza"
+				 data-etiquetas="naturaleza hojas plantas"
+				 data-descripcion="9.- Lorem ipsum dolor sit amet consectetur.
+				 	"
+			>
+				<div class="item-contenido">
+					<img src="images/naturaleza1.png" alt="">
+				</div>
+			</div>
+		</section>
+
+		<section class="overlay" id="overlay">
+			<div class="contenedor-img">
+				<button id="btn-cerrar-popup"><i class="fas fa-times"></i></button>
+				<img src="" alt="">
+			</div>
+			<p class="descripcion"></p>
+		</section>
+
+		<footer class="contenedor">
+			<div class="redes-sociales">
+				<div class="contenedor-icono">
+					<a href="http://www.twitter.com/falconmasters" target="_blank" class="twitter">
+						<i class="fab fa-twitter"></i>
+					</a>
+				</div>
+				<div class="contenedor-icono">
+					<a href="http://www.facebook.com/falconmasters" target="_blank" class="facebook">
+						<i class="fab fa-facebook-f"></i>
+					</a>
+				</div>
+				<div class="contenedor-icono">
+					<a href="http://www.instagram.com" target="_blank" class="instagram">
+						<i class="fab fa-instagram"></i>
+					</a>
+				</div>
+			</div>
+			<div class="creado-por">
+				<p>Sitio diseñado por <a href="#">Carlos Arturo</a> - <a href="https://www.falconmasters.com">FalconMasters</a></p>
+			</div>
+		</footer>
+	</div>
+
+	<script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
+	<script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
+<script src="./main.js"></script>
+</body>
+</html>
