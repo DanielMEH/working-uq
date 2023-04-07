@@ -315,7 +315,34 @@ article img {
   display: flex;
   justify-content: center;
 }
+
+.img-content-description {
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+}
+.img-content-description img {
+  width: 100%;
+}
+.img-content-description .texto {
+  width: 50%;
+  margin-top: 5rem;
+  display: block;
+}
 @media screen and (max-width: 500px) {
+    .img-content-description .texto {
+      display: block;
+    width: 100%;
+    margin-top: 0.1rem;
+    margin-bottom: 10px;
+  }
+  .img-content-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 10px;
+  }
   .categorias {
     grid-template-columns: 1fr;
   }
