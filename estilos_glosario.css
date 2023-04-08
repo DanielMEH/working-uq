@@ -4,7 +4,7 @@
   justify-content: space-between;
   max-width: 1200px;
   margin: 4rem auto;
- 
+
   gap: 20px;
 }
 .swiper {
@@ -22,9 +22,10 @@
   display: block;
   width: 100%;
   border-radius: 7px;
+  height: 100%;
 }
 
-.container_todo .text{
+.container_todo .text {
   width: 100%;
   max-width: 800px;
   padding: 0 20px;
@@ -36,7 +37,6 @@
   border-radius: 10px;
 }
 main h1 {
-
   font-size: 2rem;
   font-weight: 700;
   margin: 0;
@@ -45,40 +45,37 @@ main h1 {
 }
 
 @media (max-width: 1200px) {
-.container_todo {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 3rem 1rem;
-  gap: 20px;
-}
-  
+  .container_todo {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 3rem 1rem;
+    gap: 20px;
+  }
 }
 
 @media (max-width: 750px) {
-.container_todo {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 3rem 1rem;
-  gap: 20px;
-}
-  
+  .container_todo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 3rem 1rem;
+    gap: 20px;
+  }
 }
 
 @media (max-width: 550px) {
-.container_todo {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 1rem 1rem;
-  gap: 20px;
-}
-  
+  .container_todo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 1rem 1rem;
+    gap: 20px;
+  }
 }
