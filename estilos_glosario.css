@@ -79,3 +79,30 @@ main h1 {
     gap: 20px;
   }
 }
+
+
+.self{
+
+  font-size: 3rem;
+  text-align: center;
+ position: relative;
+  color: #263f4b;
+   margin: 20px 10px;
+}
+
+.self::after{
+  content: "";
+  
+  width: 100px;
+  height: 5px;
+  background: 
+#3366cc;
+  margin: 0 auto;
+  position: absolute;
+  top: -20px;
+  text-align: center;
+  left: 50%;
+  border-radius: 10px;
+  transform: translateX(-50%);
+ 
+}
