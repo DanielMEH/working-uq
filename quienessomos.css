@@ -1,62 +1,115 @@
-@import url('https://fonts.googleapis.com/css2? family= Nerko+One & display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2? family= Nerko+One & display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 /*   @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
 
-*{
-    font-family: 'Roboto', sans-serif;
-
+* {
+  font-family: "Roboto", sans-serif;
 }
-.galeria-imagenes {
-    /*Código para ampliar o disminuir la caja que contine los botones verdes*/
-    /*  outline: 2px solid rgb(81, 255, 0); */
-    margin: 2px;
-    padding: 5px;
-    max-width: 55%;
-    /* border-radius: 1em; */
-    background-color: #FFFFFF;
-    /* box-shadow: 1em 1em 2em var(--sombra-ppal), 1em 1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent; */
-}
+.container_todo {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 4rem auto;
 
-.contenedor p {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    font-size: 22px;
-    line-height: 19px;
-    /*  font-weight: bolder; */
-    text-align: justify;
-    color: #001545;
-    line-height: 1;
+  gap: 20px;
+}
+.swiper {
+  width: 300px;
+  height: 300px;
+  position: absolute;
 }
 
-@media screen and (max-width: 720px) {
-    .galeria-imagenes {
-        /*Código para ampliar o disminuir la caja que contine los botones verdes*/
-        /*  outline: 2px solid rgb(81, 255, 0); */
-        margin: 2px;
-        padding: 5px;
-        max-width: 95%;
-        /* border-radius: 1em; */
-        background-color: #FFFFFF;
-        /* box-shadow: 1em 1em 2em var(--sombra-ppal), 1em 1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent; */
-    }
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
 }
-    .galeria-work .cont-work{
-        border : 1px solid rgb(255, 255, 255);
-        border-radius: 8px;
-        display:flex;
-        transition: all 300ms ease-out;
-        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-        perspective: 1000px ;
 
-    }
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  border-radius: 7px;
+  height: 100%;
+}
 
-    .galeria-work .cont-work:hover{
-        transform: rotateX(30deg) translateZ(-40px) translateY(-30px);
-        box-shadow: 0 0 30px -15px rgba(0,0,0,0.5);
-       
-    }
+.container_todo .text {
+  width: 100%;
+  max-width: 800px;
+  padding: 0 20px;
+  text-align: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+main h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  margin: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .container_todo {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 3rem 1rem;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 750px) {
+  .container_todo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 3rem 1rem;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .container_todo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 1rem 1rem;
+    gap: 20px;
+  }
+}
+
+.self {
+  font-size: 3rem;
+  text-align: center;
+  position: relative;
+  color: #263f4b;
+  margin: 20px 10px;
+}
+
+.self::after {
+  content: "";
+
+  width: 100px;
+  height: 5px;
+  background: #3366cc;
+  margin: 0 auto;
+  position: absolute;
+  top: -20px;
+  text-align: center;
+  left: 50%;
+  border-radius: 10px;
+  transform: translateX(-50%);
+}
