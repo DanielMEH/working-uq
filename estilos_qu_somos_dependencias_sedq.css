@@ -11,7 +11,7 @@ main {
     font-size: 100%;
     line-height: 1em;
     /* min-height: 100vh;  */
-    background-color: var(--blanco);
+
     color: var(--negro);
     -webkit-hyphens: auto;
             hyphens: auto;
@@ -23,12 +23,7 @@ main {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
- }
-
- main strong{
-    font-weight: bolder;
- }
- 
+ } 
  .cont-work-qu_somos_dependencias_sedq {
      outline: 2px solid red;
      width: 95%;

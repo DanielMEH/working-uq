@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 /*   @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 
 /*  👉 Inicio del Reset/*
@@ -459,6 +460,13 @@ body {
 }
 
 
+.galeria-work-dependencias{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    
+}
+
 /*--Media Querys--*/
 
 @media screen and (max-width:1129px) {
@@ -769,6 +777,12 @@ main h3 {
     align-items: center;
 }
 
+.container-cont-work-directorio{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+}
+
 .cont-work {
     /**/
     /*  outline: 2px solid red; */
@@ -778,7 +792,8 @@ main h3 {
     max-width: 250px;
     max-height: 250px;
     overflow: hidden;
-    box-shadow: 10px 10px 15px #f5f5f5;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
     
     /* background-color: transparent; */
 }
@@ -1375,13 +1390,43 @@ div#gtranslate_wrapper {
         display: grid;
         grid-template-columns: repeat(2, 1fr)
     }
+    main h3 {
+      font-size: 30px;
+      color: #001545;
+      margin: 10px;
+      justify-items: center;
+      text-align: center;
+      line-height: 1;
+  }
+  
+  .self{
+  
+      width: 100%;
+  }
+  
+  
+  strong {
+      font-size: 1em;
+      font-weight: inherit;
+      font-style: inherit;
+      text-decoration: none;
+      color: inherit;
+      text-align: center;
+  }
+  
+  .container-cont-work-directorio {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 1rem;
+  }
+  
+  .galeria-work-dependencias {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 1rem;
   }
 
-.self{
-
-    width: 100%;
-}
-
+  }  
 
 
 

@@ -11,7 +11,6 @@ main {
     font-size: 100%;
     line-height: 1em;
     /* min-height: 100vh;  */
-    background-color: var(--blanco);
     color: var(--negro);
     -webkit-hyphens: auto;
             hyphens: auto;
@@ -25,10 +24,6 @@ main {
     align-items: center;
  }
 
- main strong{
-    font-weight: bolder;
- }
- 
  .cont-work-qu_somos_dir_ie {
      outline: 2px solid red;
      width: 95%;
