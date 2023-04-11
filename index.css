@@ -592,11 +592,17 @@ main {
 }
 
 main h3 {
-    font-size: 55px;
+    font-size: 40px;
     color: #001545;
     margin: 10px;
     justify-items: center;
     text-align: center;
+}
+
+.cogri{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
 }
 
 
@@ -992,6 +998,12 @@ main h3 {
     border-radius: 15px;
 }
 
+.galeria-work-normatividad{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+}
+
 .redes_sociales_video .instagram {
     /* outline: 2px solid rgb(6, 1, 31); */
     /*  box-shadow: 0 1px 14px 2px rgba(231, 209, 8, 0.637); */
@@ -1378,11 +1390,34 @@ div#gtranslate_wrapper {
       z-index: 200;
       
   }
+.columnas-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+  .contratacion-gobe{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+  }
+.galeria-work-sac{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+
+ h3 {
+    font-size: 30px;
+    color: #001545;
+    font-weight: 600;
+    display: block;
+    line-height: 30px;
+}
   .handleworked{
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
+    gap: 1rem;
 }
   @media screen and (max-width:500px) {
     .handleworked{
@@ -1426,7 +1461,44 @@ div#gtranslate_wrapper {
       gap: 1rem;
   }
 
+
+  .galeria-work-normatividad {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+
+.contratacion-gobe {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+
+.cogri {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
   }  
 
+  .galeria-work-sac {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.contenedor h3 {
+    font-size: 25px;
+    color: #001545;
+    font-weight: 600;
+    display: block;
+    line-height: 30px;
+}
+
+h3{
+    font-size: 25px;
+}
+  
+
+  }
 
 

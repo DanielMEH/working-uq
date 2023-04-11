@@ -11,7 +11,6 @@ main {
     font-size: 100%;
     line-height: 1em;
     /* min-height: 100vh;  */
-    background-color: var(--blanco);
     color: var(--negro);
     -webkit-hyphens: auto;
             hyphens: auto;

@@ -11,7 +11,6 @@ main {
     font-size: 100%;
     line-height: 1em;
     /* min-height: 100vh;  */
-    background-color: var(--blanco);
     color: var(--negro);
     -webkit-hyphens: auto;
             hyphens: auto;
@@ -30,16 +29,14 @@ main {
  }
  
  .cont-work-trans_contra {
-     outline: 2px solid red;
-     width: 95%;
-     margin: 15px;
-     padding: 5px;
-
-     outline: 2px solid red;
+     width: 100%;
      font-size: 25px;
      text-align: justify;
      line-height: 1.5;
      font-family: 'Montserrat', sans-serif;
      font-weight: 600;
+     box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
  }
 
