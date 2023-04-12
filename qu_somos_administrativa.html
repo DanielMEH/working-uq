@@ -19,6 +19,10 @@
     <!-- estilos locales css -->
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="estilos_administrativayfinanciera.css" />
+    <!-- slider and animates -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
 
 </head>
@@ -181,22 +185,46 @@
         </div>
     </header>
 
-    <main>
-        <br>
-        <h3>Administrativa y Financiera</h3>
-        <br><strong>Director: Dr. Jairo Andrés Silva Serna.</strong>
-        <div class="cont-work-administrativayfinanciera">
-            <div class="img-work" id="administrativayfinanciera">
-                
-                <p>Gerenciar las políticas administrativas y financieras de la secretaria de educación 
-                    departamental conforme a los parámetros legales y en cumplimiento de misión institucional, 
-                    para garantizar el normal funcionamiento de la secretaria de educación departamental en todas sus áreas.
-
-                    <br>Direccionar la elaboración y seguimiento al plan de compras de conformidad las necesidades 
-                    de funcionamiento e inversión de la secretaria de educación y establecimientos educativos.</p>
-                    <b><strong></strong></b><a href="https://docs.google.com/forms/d/e/1FAIpQLSeUzArDRx5G75DJJhDec88OPN8Gg5r0mZzJ0WgdIQDBzjcUJQ/viewform?usp=sf_link">* Encuesta</a>        
-            </div>
+    <main >
+        <h3 class="animate__animated animate__fadeInDown">Administrativa y Financiera</h3>
+        <div class="inicial">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae voluptatem voluptatibus laboriosam earum facilis nemo expedita maxime optio voluptas? Quia, maiores. Minus aliquid ipsam fugiat molestiae iste consequatur in molestias?
+            Nulla veritatis accusamus nisi minima alias possimus vel voluptas consectetur labore numquam, tenetur minus ratione ab ducimus doloremque, deserunt quos debitis. Distinctio corrupti odio earum odit! Vero quisquam animi fugiat?</p>
         </div>
+
+
+        <div class="swiper mySwiper sms">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide reduxe " style="width: 100%;">
+                <div class="animate__animated animate__fadeInLeft" style="width: 100%;">
+                <img src="img/noticias/clasificatorios.jpeg" alt="">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, earum obcaecati dolorum dicta, ducimus saepe cupiditate impedit laborum hic porro officiis rerum voluptate voluptatem voluptatibus? Dicta at voluptatem repellendus ex!</p>
+              </div>
+            </div>
+              <div class="swiper-slide ">
+                <div class="animate__animated animate__fadeInDown">
+                <img src="img/noticias/clasificatorios.jpeg" alt="">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, earum obcaecati dolorum dicta, ducimus saepe cupiditate impedit laborum hic porro officiis rerum voluptate voluptatem voluptatibus? Dicta at voluptatem repellendus ex!</p>
+              </div>
+            </div>
+              <div class="swiper-slide ">
+                <div class="animate__animated animate__fadeInRight">
+                <img src="img/noticias/clasificatorios.jpeg" alt="">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, earum obcaecati dolorum dicta, ducimus saepe cupiditate impedit laborum hic porro officiis rerum voluptate voluptatem voluptatibus? Dicta at voluptatem repellendus ex!</p>
+              </div>
+            </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="subtitulo">
+            <h2>Otros</h2>
+          </div>
+          <div class="inicial">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae voluptatem voluptatibus laboriosam earum facilis nemo expedita maxime optio voluptas? Quia, maiores. Minus aliquid ipsam fugiat molestiae iste consequatur in molestias?
+            Nulla veritatis accusamus nisi minima alias possimus vel voluptas consectetur labore numquam, tenetur minus ratione ab ducimus doloremque, deserunt quos debitis. Distinctio corrupti odio earum odit! Vero quisquam animi fugiat?</p>
+        </div>
+
+
     </main>
 
     <!--BARRA AZUL - VÍNCULOS DE INTÉRES-->
@@ -459,6 +487,31 @@
 
     <!-- <script src="js/jquery.js "></script> -->
     <!--NO Ejecutar-->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+        let width = innerWidth;
+        if (width <= 500){
+            var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+        }
+
+      </script>
 
 
 </body>

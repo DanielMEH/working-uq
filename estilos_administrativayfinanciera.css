@@ -43,4 +43,69 @@ main {
      font-family: 'Montserrat', sans-serif;
      font-weight: 600;
  }
+ .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-wrapper {
+    padding: 10px 0px;
+}
+
+.swiper-slide {
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    border-radius: 10px;
+}
+
+.swiper-slide img {
+    width: 400px;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+
+.swiper-slide p {
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+.sms {
+    max-width: 1200px;
+    margin: o auto;
+
+}
+
+.reduxe {
+
+    width: 100%;
+}
+
+.swiper-slide {
+    width: 500px;
+}
+
+ .subtitulo h2{
+    font-size: 30px;
+    color: #001545;
+    font-weight: 600;
+    margin: 40px 0 0 0;
+ }
+
+ 
+ @media screen and (max-width:500px) {
+ .inicial p {
+    width: 100%;
+    font-size: 23px;
+
+ }
+
+ .swiper-slide p {
+    padding: 10px;
+    text-align: center;
+    font-size: 23px;
+    line-height: 1;
+}
+}
+
 

@@ -11,10 +11,10 @@ main {
     font-size: 100%;
     line-height: 1em;
     /* min-height: 100vh;  */
-    background-color: var(--blanco);
+
     color: var(--negro);
     -webkit-hyphens: auto;
-            hyphens: auto;
+    hyphens: auto;
     font-smooth: always;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -23,23 +23,86 @@ main {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
- }
+}
 
- main strong{
+main strong {
     font-weight: bolder;
+}
+
+.cont-work-despacho {
+    outline: 2px solid red;
+    width: 95%;
+    margin: 15px;
+    padding: 5px;
+    outline: 2px solid red;
+    font-size: 25px;
+    text-align: justify;
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-wrapper {
+    padding: 10px 0px;
+}
+
+.swiper-slide {
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    border-radius: 10px;
+}
+
+.swiper-slide img {
+    width: 400px;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+
+.swiper-slide p {
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+.sms {
+    max-width: 1200px;
+    margin: o auto;
+
+}
+
+.reduxe {
+
+    width: 100%;
+}
+
+.swiper-slide {
+    width: 500px;
+}
+
+ .subtitulo h2{
+    font-size: 30px;
+    color: #001545;
+    font-weight: 600;
+    margin: 40px 0 0 0;
  }
+
  
- .cont-work-despacho {
-     outline: 2px solid red;
-     width: 95%;
-     margin: 15px;
-     padding: 5px;
+ @media screen and (max-width:500px) {
+ .inicial p {
+    width: 100%;
+    font-size: 23px;
 
-     outline: 2px solid red;
-     font-size: 25px;
-     text-align: justify;
-     line-height: 1.5;
-     font-family: 'Montserrat', sans-serif;
-     font-weight: 600;
  }
 
+ .swiper-slide p {
+    padding: 10px;
+    text-align: center;
+    font-size: 23px;
+    line-height: 1;
+}
+}

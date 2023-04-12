@@ -20,6 +20,11 @@
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="estilos_coberturaeducativa.css" />
 
+    <!-- slider and animates -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
 
 </head>
 
@@ -181,24 +186,48 @@
         </div>
     </header>
 
-    <main>
-        <br>
-        <h3>Cobertura Educativa</h3>
-        <br><strong>Directora: Dra. Elayne Loaiza Jurado</strong>
-        <div class="cont-work-coberturaeducativa">
-            <div class="img-work" id="coberturaeducativa">
-                
-                <p>El objeto de esta dependencia es gestionar los procesos y procedimientos tendientes 
-                    a que existan las condiciones técnico administrativa necesarias que garanticen la oferta 
-                    de cupos escolares pertinentes a la demanda, asegurando la continuidad de los estudiantes 
-                    en el sector educativo para propiciar el cierre de brechas entre poblaciones diversas, 
-                    vulnerables y por municipios, en igualdad de condiciones, en todos los niveles educativos.
-                    <br>Direccionar la ejecución de los procesos y procedimientos de la gestión de la cobertura 
-                    del servicio educativo de acuerdo con los lineamientos expedidos por el ministerio de educación nacional.</p>
-                    
-            </div>
+    <main >
+        <h3 class="animate__animated animate__fadeInDown">Cobertura Educativa</h3>
+        <div class="inicial">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae voluptatem voluptatibus laboriosam earum facilis nemo expedita maxime optio voluptas? Quia, maiores. Minus aliquid ipsam fugiat molestiae iste consequatur in molestias?
+            Nulla veritatis accusamus nisi minima alias possimus vel voluptas consectetur labore numquam, tenetur minus ratione ab ducimus doloremque, deserunt quos debitis. Distinctio corrupti odio earum odit! Vero quisquam animi fugiat?</p>
         </div>
+
+
+        <div class="swiper mySwiper sms">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide reduxe " style="width: 100%;">
+                <div class="animate__animated animate__fadeInLeft" style="width: 100%;">
+                <img src="img/noticias/clasificatorios.jpeg" alt="">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, earum obcaecati dolorum dicta, ducimus saepe cupiditate impedit laborum hic porro officiis rerum voluptate voluptatem voluptatibus? Dicta at voluptatem repellendus ex!</p>
+              </div>
+            </div>
+              <div class="swiper-slide ">
+                <div class="animate__animated animate__fadeInDown">
+                <img src="img/noticias/clasificatorios.jpeg" alt="">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, earum obcaecati dolorum dicta, ducimus saepe cupiditate impedit laborum hic porro officiis rerum voluptate voluptatem voluptatibus? Dicta at voluptatem repellendus ex!</p>
+              </div>
+            </div>
+              <div class="swiper-slide ">
+                <div class="animate__animated animate__fadeInRight">
+                <img src="img/noticias/clasificatorios.jpeg" alt="">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, earum obcaecati dolorum dicta, ducimus saepe cupiditate impedit laborum hic porro officiis rerum voluptate voluptatem voluptatibus? Dicta at voluptatem repellendus ex!</p>
+              </div>
+            </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="subtitulo">
+            <h2>Otros</h2>
+          </div>
+          <div class="inicial">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae voluptatem voluptatibus laboriosam earum facilis nemo expedita maxime optio voluptas? Quia, maiores. Minus aliquid ipsam fugiat molestiae iste consequatur in molestias?
+            Nulla veritatis accusamus nisi minima alias possimus vel voluptas consectetur labore numquam, tenetur minus ratione ab ducimus doloremque, deserunt quos debitis. Distinctio corrupti odio earum odit! Vero quisquam animi fugiat?</p>
+        </div>
+
+
     </main>
+   
 
     <!--BARRA AZUL - VÍNCULOS DE INTÉRES-->
     <div class="grupo-0">
@@ -460,6 +489,31 @@
 
     <!-- <script src="js/jquery.js "></script> -->
     <!--NO Ejecutar-->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+        let width = innerWidth;
+        if (width <= 500){
+            var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+        }
+
+      </script>
 
 
 </body>

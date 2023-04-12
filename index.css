@@ -390,6 +390,56 @@ body {
 } */
 
 
+.container-cards-dependencis{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+}
+
+.card-dependencis{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+.inicial {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.inicial p{
+    margin: 40px 0 60px 0;
+    width: 60%;
+    text-align: center;
+}
+
+.container-cards-dependencis{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.card-dependencis{
+    width: 200px;
+   
+}
+
+
+.card-dependencis img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-dependencis p{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
 /** Fin Barra Azul */
 
 
@@ -1498,7 +1548,23 @@ h3{
     font-size: 25px;
 }
   
+.inicial p {
+    margin: 40px 0 60px 0;
+    width: 60%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1;
+}
+
+
+main{
+    width: 100%;
+}
+
 
   }
+
+ 
+
 
 
