@@ -38,3 +38,9 @@ main {
      font-weight: 600;
  }
 
+ .dependencias{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
