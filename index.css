@@ -879,7 +879,7 @@ main h3 {
     height: 0%;
     display: grid;
     place-content: center;
-    background: rgba(47, 61, 71, 0.346);
+    background: rgba(47, 61, 71, 0.171);
     transition: all .2s ease-out;
     border-radius: 6px;
     
