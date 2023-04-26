@@ -1080,7 +1080,7 @@ main h3 {
     background-color: #001545;
     width: 100%;
     max-width: 100%;
-    height: 180px;
+    height: fit-content;
 }
 
 .box4 {
@@ -1391,11 +1391,12 @@ main h3 {
 .derechos {
     background-color: #5a5a5a;
     width: 100%;
-    height: 35px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: white;
+    font-size: 10px;
 }
 
 .derechos a {
@@ -1457,7 +1458,7 @@ div#gtranslate_wrapper {
 
  h3 {
     font-size: 30px;
-    color: #001545;
+
     font-weight: 600;
     display: block;
     line-height: 30px;
