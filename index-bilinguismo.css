@@ -39,13 +39,6 @@ button{
     gap: 20px;
     margin-top: 20px;
 }
-.second-box{
-    width: 35%;
-    background: #efefef;
-    border-radius: 10px;
-    padding: 15px;
-  
-}
 
 .renglones{
     display: flex;
@@ -69,3 +62,39 @@ button{
 span{
     margin: 0 3px;
 }
+
+
+html,
+    body {
+      position: relative;
+      height: 50%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 50%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 50%;
+      height: 50%;
+      object-fit: cover;
+    }
