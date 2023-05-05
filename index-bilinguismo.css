@@ -1,46 +1,66 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: 0;
 }
-.titles{
+
+.file {
+    opacity: 0;
+    height: 0px;
+
+}
+
+.file1 {
+    opacity: 1;
+    width: 900px;
+    height:900px;
+}
+
+.titles {
     color: black;
     font-size: 15px;
     font-weight: bold;
 }
 
-.container-box{
+.container-box {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-evenly;
-    margin: 30px;
+
 }
-h2{
+
+.subtitulo-bilinguismo {
     color: #001545;
     font-size: 30px;
     margin-bottom: 30px;
     font-weight: bold;
 }
-.firts-box{
-    width: 50%;
+
+.firts-box {
+    width: 60%;
+    padding: 80px;
 }
 
-button{
+.second-box {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.btn-pdf {
     display: flex;
     background: #001545;
     color: white;
     border-radius: 10px;
     padding: 10px;
-}
-.box-buttons{
-    display: flex;
-    gap: 20px;
-    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
-.renglones{
+
+.renglones {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -48,7 +68,7 @@ button{
     border-bottom: 1px dashed #333;
 }
 
-.title2{
+.title2 {
     color: #001545;
     font-size: 15px;
     margin-bottom: 10px;
@@ -56,45 +76,141 @@ button{
     padding-left: 10px;
 }
 
-.principal{
+.principal {
     color: black;
+    width: 90%;
+    margin-bottom: 30px;
+
 }
-span{
+
+/* span{
     margin: 0 3px;
+} */
+
+
+.swiper {
+    width: 60%;
+    display: block;
 }
 
+.swiper-slide {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-html,
-    body {
-      position: relative;
-      height: 50%;
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 30%;
+    object-fit: cover;
+}
+
+.pdf-bili {
+
+    width: 900px;
+    height: 900px;
+
+}
+
+@media screen and (max-width:500px) {
+    .container-box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+
     }
 
-    body {
-      background: #eee;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
-      margin: 0;
-      padding: 0;
+
+    .firts-box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+        height: auto;
+        opacity: 1;
+    }
+
+    .btn-pdf {
+        display: flex;
+        background: #001545;
+        color: white;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 20px 0 20px 0;
+
+    }
+
+    .principal {
+        color: black;
+        width: 90%;
+        text-align: center;
     }
 
     .swiper {
-      width: 50%;
+        width: 100%;
+        display: block;
     }
 
     .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .swiper-slide img {
-      display: block;
-      width: 50%;
-      height: 50%;
-      object-fit: cover;
+        display: block;
+        width: 100%;
+        height: 30%;
+        object-fit: cover;
     }
+
+    .second-box {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+    }
+
+    .pdf-bili {
+
+        width: 500px;
+        height: 500px;
+
+    }
+
+    .subtitulo-bilinguismo {
+        padding-top: 20px;
+        color: #001545;
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .file1 {
+        opacity: 1;
+        width: 400px;
+        height:900px;
+    }
+    
+
+
+
+
+
+
+}
